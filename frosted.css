@@ -9,12 +9,19 @@ h1 {
   font-weight: 300;
   color:aliceblue;
 }
+h2 {
+  font-family: 'Concert One', cursive;
+  font-size: 43px;
+  font-weight: 100;
+  color:aliceblue;
+}
 
 #header-background{
-  height: 7000px;
+  height: 100vh;
   /* background: url('https://wallpaperaccess.com/full/685208.jpg') fixed no-repeat; */
   /* background: url('https://images.hdqwalls.com/wallpapers/the-valley-minimal-4k-9y.jpg') fixed no-repeat; */
   background: url('https://i.redd.it/lg030zlyh6161.jpg') fixed no-repeat;
+  /* background: url('https://wallpapercave.com/wp/wp7620722.png') fixed no-repeat; */
   /* background: url('https://wallpaper.dog/large/5448919.jpg') fixed no-repeat; */
   /* background: url('https://cdn.wallpapersafari.com/40/26/wbQ2MV.jpg') fixed no-repeat; */
   /* background: url('https://www.pixel4k.com/wp-content/uploads/2019/03/pink-world-minimalist-4k_1551642251.jpg') fixed no-repeat; */
@@ -127,7 +134,7 @@ h1 {
 .frosted.box-phone:hover:before    {width: 375px;}
 
 
-.frosted div .url-right{
+.frosted.box div .url-right{
   position: absolute;
   top: 10px;
   left: 70px;
@@ -135,7 +142,7 @@ h1 {
   font-size: 30px;
 }
 
-.frosted div .icon{
+.frosted.box div .icon{
   display: inline-block;
   font-size: 50px;
   line-height: 60px;
@@ -144,7 +151,80 @@ h1 {
   height: 60px;
 }
 
-.frosted div a{
-  text-decoration: none; 
-  color: aliceblue; 
+.frosted.box div a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+/* Styling for cards */
+.frosted.card div {
+  width: 100%;
+  height: 100%;
+  left: -29px;
+}
+.frosted.card div h2 {
+  text-align: center;
+  line-height: 400px; /* Height of card. */
+}
+.frosted.card {
+  width: 300px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-left: -325px;
+  margin-top: -190px;
+}
+.frosted.card:before {
+  width: 350px;
+  height: 450px;
+  top: -25px;
+  left: -25px;
+}
+
+.frosted.card2 div {
+  width: 100%;
+  height: 100%;
+  left: -29px;
+}
+.frosted.card2 div h2 {
+  text-align: center;
+  line-height: 100px; 
+}
+.frosted.card2 {
+  width: 300px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-left: 0px;
+  margin-top: -190px;
+}
+.frosted.card2:before {
+  width: 350px;
+  height: 450px;
+  top: -25px;
+  left: -25px;
+}
+
+.frosted.card3 div {
+  width: 100%;
+  height: 100%;
+  left: -13px;
+}
+.frosted.card3 div h2 {
+  text-align: center;
+  line-height: 100px;
+}
+.frosted.card3 {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-left: 0px;
+  margin-top: -65px;
+}
+.frosted.card3:before {
+  width: 150px;
+  height: 450px;
+  top: -25px;
+  left: -25px;
 }
