@@ -88,16 +88,12 @@ h2 {
 
 /* -------------------------- Frosted boxes styling ------------------------- */
 .frosted.box {
-  transition:all 0.3s ease-in-out;
-  -webkit-transition:all 0.3s ease-in-out;
   width: 75px;
   height: 75px;
   top: 50%;
   left: 50%;
 }
 .frosted.box:before {
-  transition:all 0.3s ease-in-out;
-  -webkit-transition:all 0.3s ease-in-out;
   width: 125px;
   height: 125px;
   top: -25px;
@@ -109,7 +105,7 @@ h2 {
   text-decoration: none;
   color: aliceblue;
 }
-.frosted.box div .url-right{  /* ! Change url-right to be more descriptive */
+.frosted.box div .text{
   position: absolute;
   top: 10px;
   left: 70px;
@@ -153,41 +149,42 @@ h2 {
 /*                           Unique element styling                           */
 /* -------------------------------------------------------------------------- */
 
-/* Boxes */
-.frosted.box-mail {
-  margin-left: -425px;
-  margin-top: -360px;
+.expanding-box {
+  width: 120px;
+  height: 120px;
+  transition: width 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  display: inline-block;
+  margin-left: 9px;
+  position: relative;
+  top: -50px;
+  left: 0;
 }
-.frosted.box-linkedin {
-  margin-left: -425px;
-  margin-top: -440px;
+.expanding-box:before {
+  transition:all 0.3s ease-in-out;
+  -webkit-transition:all 0.3s ease-in-out;
 }
-.frosted.box-github {
-  margin-left: 400px;
-  margin-top: -360px;
+.expanding-box:hover {
+  width: 400px
 }
-.frosted.box-phone {
-  margin-left: 400px;
-  margin-top: -440px;
+#social-buttons {
+  background: inherit;
+  position: absolute;
+  margin-top: -240px;
+  margin-left: -325px;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 10px;
 }
 
-/* TODO: Fix background of left side sliding boxes. */
-.frosted.box-mail:hover {
-  width: 400px;
-  transform: translate(-325px, 0);
-}
-.frosted.box-mail:hover:before {
-  width: 450px;
-  transform: translate(0, 0);
-}
-.frosted.box-linkedin:hover {
-  width: 485px;
-  transform: translate(-410px, 0);
-}
-.frosted.box-linkedin:hover:before {
-  width: 535px;
-  transform: translate(0, 0);
-}
+/* Boxes */
+.frosted.box-github { margin-left: -300px; }
+
+.frosted.box-mail:hover            {width: 400px;}
+.frosted.box-mail:hover:before     {width: 450px;}
+.frosted.box-linkedin:hover        {width: 485px;}
+.frosted.box-linkedin:hover:before {width: 535px;}
 .frosted.box-github:hover          {width: 430px;}
 .frosted.box-github:hover:before   {width: 480px;}
 .frosted.box-phone:hover           {width: 325px;}
