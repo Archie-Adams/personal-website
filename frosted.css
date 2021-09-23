@@ -3,6 +3,23 @@
   padding: 0;
   font-family: sans-serif;
 }
+body{
+  height: 100vh;
+  /* background: url('https://wallpaperaccess.com/full/685208.jpg') fixed no-repeat; */
+  /* background: url('https://images.hdqwalls.com/wallpapers/the-valley-minimal-4k-9y.jpg') fixed no-repeat; */
+  background: url('https://i.redd.it/lg030zlyh6161.jpg') fixed no-repeat;
+  /* background: url('https://wallpapercave.com/wp/wp7620722.png') fixed no-repeat; */
+  /* background: url('https://wallpaper.dog/large/5448919.jpg') fixed no-repeat; */
+  /* background: url('https://cdn.wallpapersafari.com/40/26/wbQ2MV.jpg') fixed no-repeat; */
+  /* background: url('https://www.pixel4k.com/wp-content/uploads/2019/03/pink-world-minimalist-4k_1551642251.jpg') fixed no-repeat; */
+  background-size: cover;
+}
+main {
+  background: inherit;
+  position: absolute;
+  margin-top: 40%;
+  margin-left: 50%;
+}
 h1 {
   font-family: 'Concert One', cursive;
   font-size: 100px;
@@ -15,20 +32,12 @@ h2 {
   font-weight: 100;
   color:aliceblue;
 }
+/* -------------------------------------------------------------------------- */
 
-#header-background{
-  height: 100vh;
-  /* background: url('https://wallpaperaccess.com/full/685208.jpg') fixed no-repeat; */
-  /* background: url('https://images.hdqwalls.com/wallpapers/the-valley-minimal-4k-9y.jpg') fixed no-repeat; */
-  background: url('https://i.redd.it/lg030zlyh6161.jpg') fixed no-repeat;
-  /* background: url('https://wallpapercave.com/wp/wp7620722.png') fixed no-repeat; */
-  /* background: url('https://wallpaper.dog/large/5448919.jpg') fixed no-repeat; */
-  /* background: url('https://cdn.wallpapersafari.com/40/26/wbQ2MV.jpg') fixed no-repeat; */
-  /* background: url('https://www.pixel4k.com/wp-content/uploads/2019/03/pink-world-minimalist-4k_1551642251.jpg') fixed no-repeat; */
-  background-size: cover;
-}
 
-/* Frosted background styling */
+
+/* ------------------------- Generic frosted styling ------------------------ */
+/* TODO: Press animation */
 .frosted{
   background: inherit;
   position: absolute;
@@ -54,8 +63,11 @@ h2 {
   top: 50%;
   transform: translate(10%,-50%);
 }
+/* -------------------------------------------------------------------------- */
 
-/* Main heading box */
+
+
+/* ------------------------------ Main name box ----------------------------- */
 .frosted.name {
   width: 700px;
   height: 200px;
@@ -70,8 +82,11 @@ h2 {
   top: -25px;
   left: -25px;
 }
+/* -------------------------------------------------------------------------- */
 
-/* Styling for boxes */
+
+
+/* -------------------------- Frosted boxes styling ------------------------- */
 .frosted.box {
   transition:all 0.3s ease-in-out;
   -webkit-transition:all 0.3s ease-in-out;
@@ -88,12 +103,57 @@ h2 {
   top: -25px;
   left: -25px;
 }
-.frosted.box a {
+.frosted.box div a {
   font-family: 'Concert One', cursive;
   font-size: 20px;
+  text-decoration: none;
+  color: aliceblue;
 }
+.frosted.box div .url-right{  /* ! Change url-right to be more descriptive */
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  white-space: nowrap;
+  font-size: 30px;
+}
+.frosted.box div .icon{
+  display: inline-block;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+}
+/* -------------------------------------------------------------------------- */
 
-/* Boxes positions */
+
+
+/* -------------------------- Frosted Card Styling -------------------------- */
+.frosted.card div {
+  width: 100%;
+  height: 100%;
+}
+.frosted.card div h2 {
+  text-align: center;
+  line-height: 400px; /* Height of card. */
+}
+.frosted.card {
+  top: 50%;
+  left: 50%;
+}
+.frosted.card:before {
+  top: -25px;
+  left: -25px;
+}
+/* -------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                           Unique element styling                           */
+/* -------------------------------------------------------------------------- */
+
+/* Boxes */
 .frosted.box-mail {
   margin-left: -425px;
   margin-top: -360px;
@@ -134,97 +194,58 @@ h2 {
 .frosted.box-phone:hover:before    {width: 375px;}
 
 
-.frosted.box div .url-right{
-  position: absolute;
-  top: 10px;
-  left: 70px;
-  white-space: nowrap;
-  font-size: 30px;
-}
 
-.frosted.box div .icon{
-  display: inline-block;
-  font-size: 50px;
-  line-height: 60px;
-  text-align: center;
-  width: 60px;
-  height: 60px;
-}
-
-.frosted.box div a{
-  text-decoration: none;
-  color: aliceblue;
-}
-
-/* Styling for cards */
-.frosted.card div {
-  width: 100%;
-  height: 100%;
-  left: -29px;
-}
-.frosted.card div h2 {
-  text-align: center;
-  line-height: 400px; /* Height of card. */
-}
-.frosted.card {
+/* Cards */
+.frosted.card-about-me {
   width: 300px;
   height: 400px;
-  top: 50%;
-  left: 50%;
-  margin-left: -325px;
-  margin-top: -190px;
+  margin-left: -325px; /* Same left margin as .frosted.name */
+  margin-top: 0px;
 }
-.frosted.card:before {
+.frosted.card-about-me:before {
   width: 350px;
   height: 450px;
-  top: -25px;
-  left: -25px;
 }
-
-.frosted.card2 div {
-  width: 100%;
-  height: 100%;
+.frosted.card-about-me div {
   left: -29px;
 }
-.frosted.card2 div h2 {
+/* ------------------------------------ */
+.frosted.card-portfolio div {
+  left: -29px;
+}
+.frosted.card-portfolio div h2 {
   text-align: center;
   line-height: 100px; 
 }
-.frosted.card2 {
+.frosted.card-portfolio {
   width: 300px;
   height: 100px;
-  top: 50%;
-  left: 50%;
   margin-left: 0px;
-  margin-top: -190px;
+  margin-top: 0px;
 }
-.frosted.card2:before {
+.frosted.card-portfolio:before {
   width: 350px;
-  height: 450px;
-  top: -25px;
-  left: -25px;
+  height: 150px;
 }
-
-.frosted.card3 div {
-  width: 100%;
-  height: 100%;
+/* ------------------------------------ */
+.frosted.card-cv div {
   left: -13px;
 }
-.frosted.card3 div h2 {
+.frosted.card-cv div h2 {
   text-align: center;
   line-height: 100px;
 }
-.frosted.card3 {
+.frosted.card-cv {
   width: 100px;
   height: 100px;
-  top: 50%;
-  left: 50%;
   margin-left: 0px;
-  margin-top: -65px;
+  margin-top: 125px;
 }
-.frosted.card3:before {
+.frosted.card-cv:before {
   width: 150px;
   height: 450px;
-  top: -25px;
-  left: -25px;
 }
+/* TODO: Reveal view cv text and icon slide animation. */
+/* TODO: On click show cv pdf */
+/* ------------------------------------ */
+/* -------------------------------------------------------------------------- */
