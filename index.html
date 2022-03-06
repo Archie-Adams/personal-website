@@ -5,108 +5,266 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>archieada.ms</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="frosted.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <script src="https://kit.fontawesome.com/7242e2f119.js" crossorigin="anonymous"></script>
 
-  <title>Home - Archie Adams</title>
+
+  <style>
+    body {
+      background-color: #111;
+    }
+
+    h1 {
+      font-weight: 500;
+      color: lightgray;
+      font-size: 6em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    .span-blog {
+      color: #41b941;
+    }
+
+    .span-dot {
+      color: #f339fa;
+      font-size: 1.25em;
+    }
+
+    .span-dev {
+      color: rgb(200, 26, 26);
+    }
+
+    .span-contact {
+      color: rgb(62, 161, 128);
+    }
+
+    .container {
+      position: relative;
+
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .container .card {
+      position: relative;
+      width: 320px;
+      height: 450px;
+      background: #232323;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .container .card.card-contact {
+      box-shadow: 0px 0px 5px 2px rgb(23, 24, 23);
+      height: 270px;
+      width: 400px;
+    }
+
+    .container .card.card-contact:hover {
+      box-shadow: 0px 0px 8px 3px rgb(5, 63, 41);
+    }
+
+    .container .card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      clip-path: circle(150px at 80% 20%);
+      transition: 0.5s ease-in-out;
+    }
+
+    .container .card.card-contact:before {
+      background: rgb(62, 161, 128);
+    }
+
+    .container .card:hover:before {
+      clip-path: circle(300px at 80% -20%);
+    }
+
+    .container .card:after {
+      content: 'Random';
+      position: absolute;
+      top: 25%;
+      left: -20%;
+      font-size: 8em;
+      font-weight: 700;
+      font-style: italic;
+      color: rgba(25, 255, 102, 0.05);
+      transform: rotate(-40deg);
+    }
+
+    .container .card.card-contact:after {
+      content: 'Contact';
+    }
+
+    .container .card .imgBx {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10000;
+      width: 100%;
+      height: 220px;
+      transition: 0.5s;
+    }
+
+    .container .card:hover .imgBx {
+      top: 15%;
+      transform: translateY(0%);
+    }
+
+    .container .card .imgBx img {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-17deg);
+      width: 170px;
+    }
+
+    .container .card .contentBx {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      transition: 1s;
+      z-index: 10;
+    }
+
+    .container .card:hover .contentBx {
+      height: 210px;
+    }
+
+    .container .card .contentBx h2 {
+      position: relative;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #fff;
+      margin: 0;
+    }
+
+    .container .card .contentBx .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 20px;
+      transition: 0.5s;
+      opacity: 0;
+      visibility: hidden;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .container .card:hover .contentBx .socials {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0.5s;
+    }
+
+    .container .card .contentBx .socials a {
+      width: 38px;
+      height: 38px;
+      text-align: center;
+      line-height: 38px;
+      font-size: 23px;
+      display: inline-block;
+      color: #111;
+      background: #fff;
+      margin: 0 5px;
+      transition: 0.5s;
+      color: #111;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .container .card .contentBx .socials a:hover:nth-child(1) {
+      background: #0072b1;
+    }
+
+    .container .card .contentBx .socials a:hover:nth-child(2) {
+      background: #DB4437;
+    }
+
+    .container .card .contentBx .socials a:hover:nth-child(3) {
+      background: #a36ab1;
+    }
+
+    .container .card .contentBx .socials a:hover:nth-child(4) {
+      background: #89d887;
+    }
+
+    .container .card .contentBx a.btn {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 0.5s;
+    }
+
+    .container .card:hover .contentBx a.btn {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0.75s;
+    }
+  </style>
+
 </head>
 
 <body>
 
-  <!-- TODO: Move into a header section. -->
-  <div class="frosted name">
-    <div>
-      <h1>Archie Adams</h1>
-    </div>
+  <div class="d-flex justify-content-center mt-3">
+    <h1>archieada<span class="span-dot">.</span>ms</h1>
+    <!-- <h1><span class="span-blog">blog.</span>archieada<span class="span-dot">.</span>ms</h1> -->
+    <!-- <h1><span class="span-dev">dev.</span>archieada<span class="span-dot">.</span>ms</h1> -->
+    <!-- <h1><span class="span-contact">contact.</span>archieada<span class="span-dot">.</span>ms</h1> -->
   </div>
 
-  <div id="social-buttons">
-    <div class="frosted box box-github expanding-box">
-      <div>
-        <a class="icon" href="https://github.com/Archie-Adams"><i class="fab fa-github"></i></a>
-        <a class="text" href="https://github.com/Archie-Adams">github.com/Archie-Adams</a>
-      </div>
-    </div>
-    <div class="frosted box box-phone expanding-box">
-      <div>
-        <a class="icon" href="tel:+44-7783-620-835"><i class="fas fa-mobile-alt"></i></a>
-        <a class="text" href="tel:+44-7783-620-835">+44 7783 620 835</a>
-      </div>
-    </div>
-    <div class="frosted box box-mail expanding-box">
-      <div>
-        <a class="icon" href="mailto:archiea2002@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a class="text" href="mailto:archiea2002@gmail.com">archiea2002@gmail.com</a>
-      </div>
-    </div>
-    <div class="frosted box box-linkedin expanding-box">
-      <div>
-        <a class="icon" href="https://www.linkedin.com/in/archie-adams/"><i class="fab fa-linkedin"></i></a>
-        <a class="text" href="https://www.linkedin.com/in/archie-adams/">linkedin.com/in/archie-adams</a>
-      </div>
-    </div>
+  <div class="container mt-3">
+    <hr style="color: #0072b1; width: 100%;">
   </div>
 
+  <div class="container mt-3">
 
-
-  <main>
-
-    <div class="frosted card card-about-me">
-      <div>
-        <h2>About Me</h2>
+    <div class="card card-contact">
+      <div class="contentBx">
+        <h2>Contact Me</h2>
+        <div class="socials mt-5">
+          <a target="_blank" href="https://www.linkedin.com/in/archie-adams"><i class="fab fa-linkedin"></i></a>
+          <a target="_blank" href="mailto:archiea2002@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a target="_blank" href="https://github.com/Archie-Adams"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="tel:+447783620835"><i class="fas fa-phone"></i></a>
+        </div>
       </div>
     </div>
-    <div class="frosted card card-portfolio">
-      <div>
-        <h2>Portfolio</h2>
+    <div class="card">
+      <div class="imgBx">
+        <img style="filter: invert(100%);"
+          src="https://icon-library.com/images/contact-book-icon/contact-book-icon-16.jpg"
+          alt="An icon of a contacts book.">
       </div>
-    </div>
-    <div class="frosted card card-cv">
-      <div>
+      <div class="contentBx">
         <h2>CV</h2>
+        <a class="btn btn-success mt-4" href=""><i class=" fas fa-download"></i> Download (.pdf)</a>
       </div>
     </div>
+  </div>
 
-  </main>
-
-  <!-- <br>
-  <h2>About</h2>
-  <p>
-    I am currently an undergraduate studying Computer Science in partnership
-    with PwC on their Flying Start Degree Program at the University of Leeds.
-  </p>
-  <h3>Timeline</h3>
-  <p>2020 | PwC</p>
-  <p>2020 | University of Leeds</p>
-  <p>2020 | Taylor & Francis Group</p>
-  <p>2019 | Nuom</p>
-  <p>2019 | Plusnet</p>
-
-  <h2>CV</h2>
-  <a href="cv.pdf">Download (pdf)</a>
-
-  <h2>Portfolio</h2>
-  <h3>AutoHotKey</h3>
-  <ul>
-    <li><a href="https://github.com/Archie-Adams/ahk-scripts">ahk-scripts</a></li>
-    <li><a href="https://github.com/Archie-Adams/ahk-js-injector">ahk-js-injector</a></li>
-  </ul>
-  <h3>Website</h3>
-  <ul>
-    <li><a href="https://github.com/Archie-Adams/keyboard-shortcut-map-maker">keyboard-shortcut-map-maker</a></li>
-  </ul>
-  <h3>Programming Challenge</h3>
-  <ul>
-    <li><a href="https://github.com/Archie-Adams/Advent-of-Code">Advent-of-Code</a></li>
-  </ul> -->
 
 </body>
 
-
 </html>
+
+
+<!-- For blog site -->
+<!-- https://codepen.io/ericmahoney/pen/oNLMOYw -->
