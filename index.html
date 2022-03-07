@@ -28,6 +28,35 @@
       font-size: 6em;
       margin-top: 0.5em;
       margin-bottom: 0;
+      text-align: center;
+    }
+
+    /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+    @media screen and (min-width: 621px) {
+      h1 {
+        font-size: 6em;
+        font-size: 6em;
+      }
+    }
+
+    /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+    @media screen and (max-width: 620px) {
+      h1 {
+        font-size: 4.5em;
+      }
+    }
+
+    /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+    @media screen and (max-width: 420px) {
+      h1 {
+        font-size: 4em;
+      }
+    }
+
+    @media screen and (max-width: 385px) {
+      h1 {
+        font-size: 3.5em;
+      }
     }
 
     h2 {
@@ -48,8 +77,8 @@
       color: rgb(200, 26, 26);
     }
 
-    .span-contact {
-      color: rgb(62, 161, 128);
+    .span-journey {
+      color: rgb(59, 137, 168);
     }
   </style>
 
@@ -57,12 +86,12 @@
 
 <body>
 
-  <div class="mt-3">
-    <h1>archieada<span class="span-dot">.</span>ms</h1>
+  <div class="main-container mt-3">
+    <h1 style="width: 100%;">archieada<span class="span-dot">.</span>ms</h1>
     <!-- <h1><span class="span-blog">blog.</span>archieada<span class="span-dot">.</span>ms</h1> -->
     <!-- <h1><span class="span-dev">dev.</span>archieada<span class="span-dot">.</span>ms</h1> -->
     <!-- <h1><span class="span-contact">contact.</span>archieada<span class="span-dot">.</span>ms</h1> -->
-    <h2>Computer Science Student</h2>
+    <h2 style="width: 100%;">Computer Science Student</h2>
   </div>
 
 
@@ -71,10 +100,12 @@
       <div class="box">
         <div class="content">
           <h2>01</h2>
-          <h3>My Projects</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?
+          <h3 style="margin-bottom: 0;">My Projects</h3>
+          <h5 style="color:#9b9898; margin-top: 0;">archieada<span class="span-dot">.</span>ms<span
+              class="span-dev">/projects</span></h5>
+          <p class="mt-4">Here I show my programming portfolio.
           </p>
-          <a href="#">Read More</a>
+          <a href="#">See More</a>
         </div>
       </div>
     </div>
@@ -89,7 +120,7 @@
           <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore
             inventore?
           </p>
-          <a href="#">Read More</a>
+          <a href="#">See More</a>
         </div>
       </div>
     </div>
@@ -98,10 +129,12 @@
       <div class="box">
         <div class="content">
           <h2>03</h2>
-          <h3>My Journey</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?
+          <h3 style="margin-bottom: 0;">My Journey</h3>
+          <h5 style="color:#9b9898; margin-top: 0;">archieada<span class="span-dot">.</span>ms<span
+              class="span-journey">/journey</span></h5>
+          <p class="mt-4">This page shows my professional journey from my
           </p>
-          <a href="#">Read More</a>
+          <a href="#">See More</a>
         </div>
       </div>
     </div>
@@ -109,7 +142,7 @@
 
 
   <div class="container">
-    <hr style="color: #4a4f52; width: 100%;">
+    <hr style="color: #4a4f52; width: 100%; width:85%; max-width: 1400px;">
   </div>
 
 
@@ -117,7 +150,7 @@
 
     <div class="card card-contact">
       <div class="contentBx">
-        <h2>Contact Me</h2>
+        <h2>Contacts and Socials</h2>
         <div class="socials mt-5">
           <a target="_blank" href="https://www.linkedin.com/in/archie-adams"><i class="fab fa-linkedin"></i></a>
           <a target="_blank" href="mailto:archiea2002@gmail.com"><i class="fas fa-envelope"></i></a>
