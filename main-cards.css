@@ -66,7 +66,9 @@ body .main-container .main-card .box {
 }
 
 body .main-container .main-card .box:hover {
-  transform: translateY(-45px);
+  transform: scale(0.95);
+  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.568);
+
 }
 
 body .main-container .main-card .box:before {
