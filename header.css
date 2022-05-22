@@ -1,0 +1,75 @@
+h1 {
+  font-weight: 500;
+  color: #181818;
+  font-size: 6em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+h1::before {
+  content: 'Hi there 👋, I\'m';
+  font-size: 1.2rem;
+  position: absolute;
+  top: 4.2em;
+}
+
+@media screen and (min-width: 621px) {
+  h1 {
+    font-size: 6em;
+    font-size: 6em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  h1 {
+    font-size: 4.5em;
+  }
+
+  h1::before {
+    top: 3em;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h1::before {
+    top: 2.5em;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  h1 {
+    font-size: 3.5em;
+  }
+
+  h1::before {
+    top: 2.2em;
+  }
+}
+
+.span-dot {
+  color: #f339fa;
+  font-size: 1.25em;
+}
+
+/* Span classes for sub-domain colouring in testing. */
+.span-blog {
+  color: #41b941;
+}
+
+.span-dev {
+  color: rgb(200, 26, 26);
+}
+
+.span-journey {
+  color: rgb(59, 137, 168);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
