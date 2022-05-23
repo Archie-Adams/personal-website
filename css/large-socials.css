@@ -74,7 +74,7 @@
 
 .large-social-card:hover .face.face1 .content {
   opacity: 1;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .large-social-card .face.face1 .content i {
@@ -95,6 +95,8 @@
 
 .large-social-card {
   overflow: hidden;
+  border: 2px solid var(--card-border);
+  border-radius: 15px;
 }
 
 .large-social-card:hover .face.face1 {
@@ -103,7 +105,7 @@
 
 .large-social-card:hover .face.face2 {
   /* transform: translateY(-100px); */
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .large-social-card .face.face2 .content h3 {
@@ -120,4 +122,5 @@
 .large-social-card a {
   text-decoration: none;
   color: #414141;
+  padding: 2em 0;
 }
