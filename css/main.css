@@ -1,0 +1,44 @@
+/* Color scheme. */
+:root {
+  --header-color: #181818;
+  --header-dot-color: #ffb7b7;
+
+  --link-color: rgb(194, 42, 148);
+
+  --card-background: #faf6ff;
+  --card-border: #2e2e2e;
+
+  --blog-color-main: #41b941;
+  --dev-color-main: rgb(200, 26, 26);
+  --journey-color-main: rgb(59, 137, 168);
+
+  --social-linkedin-color: #0072b1;
+  --social-email-color: #DB4437;
+  --social-github-color: #a36ab1;
+  --social-phone-color: #89d887;
+
+  --secondary-color: #ffb7b7;
+}
+
+/* Link colours. */
+a {
+  color: var(--link-color);
+}
+
+/* TODO: Link hover. Pop-out/enlarge text maybe? */
+
+/* Highlight color. */
+::selection {
+  background: var(--secondary-color);
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: var(--secondary-color);
+  /* Gecko Browsers */
+}
+
+/* Fonts */
+* {
+  font-family: 'Helvetica';
+}

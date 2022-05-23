@@ -1,0 +1,146 @@
+@import 'main.css';
+
+
+/* ------------------------------- Grid Layout ------------------------------ */
+
+.main-grid-parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  max-width: min(calc(100vw - 100px), 951px);
+  margin: auto;
+  margin-top: 2.5rem;
+  height: fit-content;
+}
+
+#my-projects {
+  grid-area: 1 / 1 / 3 / 7;
+}
+
+#blog-cv-container {
+  grid-area: 3 / 4 / 6 / 7;
+  display: grid;
+  gap: 50px;
+}
+
+#timeline {
+  grid-area: 3 / 1 / 6 / 4;
+}
+
+#socials-container {
+  grid-area: 6 / 1 / 7 / 7;
+  display: grid;
+  /* TODO: Make socials self contained in size and use a psuedoelement. */
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 50px;
+  max-width: 100%;
+}
+
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+/* TODO: Refactor the projects card to be a grid, then all other cards wont need an extra card-details div. */
+
+.card-container {
+  background: var(--card-background);
+  text-align: left;
+  border-radius: 18px;
+  overflow: hidden;
+  width: 100%;
+  border: 2px solid var(--card-border);
+  height: 100%;
+}
+
+.card-details {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  padding: 30px;
+  height: 100%;
+  float: left;
+  width: 55%;
+  font-family: 'Helvetica';
+  line-height: 1.5;
+}
+
+.card-details h4 {
+  margin-top: 0.5rem;
+  color: var(--card-border)
+}
+
+.card-text {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card-container .card-details h3 {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--card-border);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.card-button {
+  margin-top: 1rem;
+}
+
+.card-image {
+  display: inline-block;
+  width: 45%;
+  height: 100%;
+}
+
+.card-image img {
+  height: fit-content;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.see-more-fade {
+  -webkit-mask-image: linear-gradient(to bottom, black 15%, transparent 98%);
+  mask-image: linear-gradient(to bottom, black 15%, transparent 98%);
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* -------------------------------------------------------------------------- */
+
+#timeline h4 {
+  font-size: 23px;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}

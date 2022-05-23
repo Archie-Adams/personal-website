@@ -8,14 +8,13 @@
   <title>archieada.ms</title>
 
   <!-- TODO: Icon. -->
+  <!-- Icon Idea: Rotating selection of emoji? Animated w/ JS. -->
   <!-- TODO: Description and social media metadata properties. -->
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
   <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home-cards.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/large-socials.css">
 
   <script src="https://kit.fontawesome.com/7242e2f119.js" crossorigin="anonymous"></script>
 
@@ -23,37 +22,179 @@
 
 <body>
 
-  <div class="header-container mt-3">
+  <header>
     <h1>archieada<span class="span-dot">.</span>ms</h1>
     <h2>Computer Science Student</h2>
-  </div>
+  </header>
 
+  <div class="main-grid-parent">
+    <div id="my-projects">
+      <div class="card-container">
 
-  <!-- TODO: Content. -->
+        <div class="card-details">
 
+          <h3>My Projects</h3>
 
-  <hr style="color: #4a4f52; width:85%; max-width: 1400px;">
+          <p class="card-text">
+            In my spare time I like to develop various applications to improve my productivity, learn new
+            techniques and technologies, or just for the fun of it. They are all open source on <a target="_blank"
+              href="https://github.com/Archie-Adams">my GitHub</a>. Click below to find out what I've built and what I'm
+            working on next!
+          </p>
 
-  <div class="footer-container mt-3 mb-5">
+          <div class=" card-button">
+            <a class="button" href="/" target="_blank">View My Projects!</a>
+          </div>
+        </div>
 
-    <div class="socials">
-      <p>Contacts and Socials:</p>
-      <a target="_blank" href="https://www.linkedin.com/in/archie-adams"><i class="fab fa-linkedin"></i></a>
-      <a target="_blank" href="mailto:archiea2002@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a target="_blank" href="https://github.com/Archie-Adams"><i class="fab fa-github"></i></a>
-      <a target="_blank" href="tel:+447783620835"><i class="fas fa-phone"></i></a>
+        <!-- TODO: Make a slide-show of project thumbnails. -->
+        <div class="card-image">
+          <img
+            src="https://ipt.imgix.net/200626/x/0/best-aspect-ratios-for-landscape-photography-in-iceland-5.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883"
+            alt="">
+        </div>
+
+      </div>
     </div>
+    <div id="blog-cv-container">
+      <div id="blog">
+        <!-- TODO: Put these different than default card values into css. -->
+        <div class="card-container">
+          <div class="card-details" style="width: 100%;">
+            <h3>Blog</h3>
+            <p class="card-text">
+              Check out my blog where I occasionaly post articles about my projects, interest and experiences in
+              technology,
+              computer science and my career!
+            </p>
+            <div class="card-button">
+              <a class="button" target="_blank" href="">View My Blog!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cv">
+        <!-- TODO: Put these different than default card values into css. -->
+        <div class="card-container">
+          <div class="card-details" style="width: 100%;">
+            <h3>Curriculum Vitae</h3>
+            <p class="card-text">
+              Here is my up to date CV downloadable as a convinient .pdf file.
+            </p>
+            <div class="card-button">
+              <a class="button" target="_blank" href="archie-adams-cv.pdf"><i class=" fas fa-download"></i> Download
+                (.pdf)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="timeline">
+      <div class="card-container">
 
-    <div class="cv-download">
-      <p>Curriculum Vitae:</p>
-      <a class="btn btn-success" target="_blank" href="cv.pdf"><i class=" fas fa-download"></i> Download
-        (.pdf)</a>
+        <div class="card-details" style="width: 100%;">
+
+          <h3>Timeline</h3>
+
+          <!-- TODO: Content of timeline. -->
+          <h4>2022 | PwC - Software Developer</h4>
+          <p class="card-text see-more-fade line-clamp-3">
+            My work as a Software Developer in the Deals App Development Team consisted of Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Temporibus, eum quibusdam.
+          </p>
+
+          <h4>2022 | University of Leeds</h4>
+          <p class="card-text see-more-fade line-clamp-3">
+            My work as a Software Developer in the Deals App Development Team consisted of Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Temporibus, eum quibusdam. Nulla sequi est enim unde dolores nemo nobis
+            minus.
+          </p>
+
+          <h4>2021 | Taylor & Francis - SEO Intern</h4>
+          <p class="card-text see-more-fade line-clamp-2">
+            My work as a Software Developer in the Deals App Development Team consisted of Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Temporibus, eum quibusdam. Nulla sequi est enim unde dolores nemo nobis
+            minus.
+          </p>
+
+          <div class="card-button" style="width:70%; margin:auto; margin-top:30px;">
+            <a class="button" target="_blank" href="" style="width: 100%;">See all of my work history!</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div id="socials-container">
+      <div class="large-social-card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon linkedin">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="https://www.linkedin.com/in/archie-adams" target="_blank">archie-adams</a>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="large-social-card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon telephone">
+              <i class="fas fa-phone-square" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="tel:+447783620835" target="_blank">+44 7783 620 835</a>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="large-social-card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon github">
+              <i class="fa fa-github-square" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="https://github.com/Archie-Adams" target="_blank">Archie-Adams</a>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="large-social-card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon email">
+              <i class="fas fa-envelope-square" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="mailto:archiea2002@gmail.com" target="_blank">archiea2002@gmail.com</a>
+            </h3>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
 
 </body>
 
 </html>
-
-<!-- TODO: Currently only using, btn-success, and margins - maybe bootstrap is not needed? -->

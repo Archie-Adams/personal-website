@@ -1,3 +1,5 @@
+@import 'main.css';
+
 .footer-container {
   position: relative;
   display: flex;
@@ -7,6 +9,8 @@
   flex-wrap: wrap;
   max-width: none;
   flex-basis: 100%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -59,19 +63,19 @@
 /* ? NOTE: the <p> element is index 1 in the div. */
 
 .socials a:hover:nth-child(2) {
-  background: #0072b1;
+  background: var(--social-linkedin-color);
 }
 
 .socials a:hover:nth-child(3) {
-  background: #DB4437;
+  background: var(--social-email-color);
 }
 
 .socials a:hover:nth-child(4) {
-  background: #a36ab1;
+  background: var(--social-github-color);
 }
 
 .socials a:hover:nth-child(5) {
-  background: #89d887;
+  background: var(--social-phone-color);
 }
 
 /* -------------------------------------------------------------------------- */

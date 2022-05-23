@@ -1,0 +1,20 @@
+@import 'main.css';
+
+.button {
+  border-radius: 6px;
+  border: 1px solid #e18d8d;
+  color: #e18d8d;
+  display: block;
+  min-height: 50px;
+  font-size: 18px;
+  padding-top: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 2;
+  text-align: center;
+}
+
+.button:hover {
+  color: #ffff;
+  background-color: #e18d8d;
+}
