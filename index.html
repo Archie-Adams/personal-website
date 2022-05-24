@@ -29,29 +29,29 @@
 
   <div class="main-grid-parent">
     <div id="my-projects">
-      <div class="card-container">
+      <div id="my-projects-container" class="card-container">
+        <div id="my-projects-text-area">
+          <div class="my-projects-card-text">
+            <h3>My Projects</h3>
 
-        <div class="card-details">
+            <p class="card-text">
+              In my spare time I like to develop various applications to improve my productivity, learn new
+              techniques and technologies, or just for the fun of it. They are all open source on <a target="_blank"
+                href="https://github.com/Archie-Adams">my GitHub</a>. Click below to find out what I've built and what
+              I'm
+              working on next!
+            </p>
 
-          <h3>My Projects</h3>
-
-          <p class="card-text">
-            In my spare time I like to develop various applications to improve my productivity, learn new
-            techniques and technologies, or just for the fun of it. They are all open source on <a target="_blank"
-              href="https://github.com/Archie-Adams">my GitHub</a>. Click below to find out what I've built and what I'm
-            working on next!
-          </p>
-
-          <div class=" card-button">
-            <a class="button" href="/" target="_blank">View My Projects!</a>
+            <div class=" card-button">
+              <a class="button" href="/" target="_blank">View My Projects!</a>
+            </div>
           </div>
         </div>
-
-        <!-- TODO: Make a slide-show of project thumbnails. -->
-        <div class="card-image">
-          <img
-            src="https://ipt.imgix.net/200626/x/0/best-aspect-ratios-for-landscape-photography-in-iceland-5.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883"
-            alt="">
+        <div class="my-projects-images">
+          <!-- TODO: Make a slide-show of project thumbnails. -->
+          <div class="card-image">
+            <!-- IMG HERE -->
+          </div>
         </div>
 
       </div>
@@ -60,66 +60,61 @@
       <div id="blog">
         <!-- TODO: Put these different than default card values into css. -->
         <div class="card-container">
-          <div class="card-details" style="width: 100%;">
-            <h3>Blog</h3>
-            <p class="card-text">
-              Check out my blog where I occasionally post articles about my projects, interest and experiences in
-              technology,
-              computer science and my career!
-            </p>
-            <div class="card-button">
-              <a class="button" target="_blank" href="">View My Blog!</a>
-            </div>
+          <h3>Blog</h3>
+          <p class="card-text">
+            Check out my blog where I occasionally post articles about my projects, interest and experiences in
+            technology,
+            computer science and my career!
+          </p>
+          <div class="card-button">
+            <a class="button" target="_blank" href="">View My Blog!</a>
           </div>
         </div>
       </div>
       <div id="cv">
         <!-- TODO: Put these different than default card values into css. -->
         <div class="card-container">
-          <div class="card-details" style="width: 100%;">
-            <h3>Curriculum Vitae</h3>
-            <p class="card-text">
-              Here is my up to date CV downloadable as a convenient and printable .pdf file.
-            </p>
-            <div class="card-button">
-              <a class="button" target="_blank" href="archie-adams-cv.pdf"><i class=" fas fa-download"></i> Download
-                (.pdf)</a>
-            </div>
+          <h3>Curriculum Vitae</h3>
+          <p class="card-text">
+            Here is my up to date CV downloadable as a convenient and printable .pdf file.
+          </p>
+          <div class="card-button">
+            <a class="button" target="_blank" href="archie-adams-cv.pdf"><i class=" fas fa-download"></i> Download
+              (.pdf)</a>
           </div>
         </div>
       </div>
     </div>
     <div id="timeline">
+      <!-- IDEA: On timeline hover scroll the list to see all, or have list scrolling slowly always? -->
       <div class="card-container">
 
-        <div class="card-details" style="width: 100%;">
 
-          <h3>Timeline</h3>
+        <h3>Timeline</h3>
 
-          <!-- TODO: Content of timeline. -->
+        <!-- TODO: Content of timeline. -->
+        <div class="see-more-fade">
           <h4>2022 | PwC - Software Developer</h4>
-          <p class="card-text see-more-fade line-clamp-3">
+          <p class="card-text line-clamp-3">
             My work as a Software Developer in the Deals App Development Team consisted of Lorem, ipsum dolor sit amet
             consectetur adipisicing elit. Temporibus, eum quibusdam.
           </p>
-
           <h4>2022 | University of Leeds</h4>
-          <p class="card-text see-more-fade line-clamp-3">
+          <p class="card-text line-clamp-3">
             My work as a Software Developer in the Deals App Development Team consisted of Lorem, ipsum dolor sit amet
             consectetur adipisicing elit. Temporibus, eum quibusdam. Nulla sequi est enim unde dolores nemo nobis
             minus.
           </p>
-
           <h4>2021 | Taylor & Francis - SEO Intern</h4>
-          <p class="card-text see-more-fade line-clamp-2">
+          <p class="card-text line-clamp-2">
             My work as a Software Developer in the Deals App Development Team consisted of Lorem, ipsum dolor sit amet
             consectetur adipisicing elit. Temporibus, eum quibusdam. Nulla sequi est enim unde dolores nemo nobis
             minus.
           </p>
+        </div>
 
-          <div class="card-button" style="width:70%; margin:auto; margin-top:30px;">
-            <a class="button" target="_blank" href="" style="width: 100%;">See all of my work history!</a>
-          </div>
+        <div class="card-button" style="width:70%; margin:auto; margin-top:30px;">
+          <a class="button" target="_blank" href="" style="width: 100%;">See all of my work history!</a>
         </div>
 
       </div>

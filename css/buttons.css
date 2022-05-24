@@ -2,8 +2,8 @@
 
 .button {
   border-radius: 6px;
-  border: 1px solid #e18d8d;
-  color: #e18d8d;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
   display: block;
   min-height: 50px;
   font-size: 18px;
@@ -12,9 +12,11 @@
   text-decoration: none;
   z-index: 2;
   text-align: center;
+  background-color: var(--accent-color);
+  color: #ffff;
 }
 
 .button:hover {
-  color: #ffff;
-  background-color: #e18d8d;
+  background-color: var(--card-background);
+  color: var(--accent-color);
 }

@@ -1,43 +1,46 @@
 /* Color scheme. */
+/* TODO: Lemon lime colour scheme? */
+/* Shallow gradient as the background? */
+/* https://hookagency.com/blog/website-color-schemes/ */
 :root {
   --header-color: #181818;
-  --header-dot-color: #ffb7b7;
+  /* nice light pink #ffb7b7; */
+  --accent-color: #46b8ab;
 
-  --link-color: rgb(194, 42, 148);
-
-  --card-background: #faf6ff;
+  /* --card-background: #faf6ff; */
+  --card-background: #ffffff;
   --card-border: #2e2e2e;
 
   --blog-color-main: #41b941;
   --dev-color-main: rgb(200, 26, 26);
   --journey-color-main: rgb(59, 137, 168);
 
+  /* TODO: Make these reflect big-socials. */
   --social-linkedin-color: #0072b1;
   --social-email-color: #DB4437;
   --social-github-color: #a36ab1;
   --social-phone-color: #89d887;
-
-  --secondary-color: #ffb7b7;
 }
 
 /* Link colours. */
 a {
-  color: var(--link-color);
+  color: var(--accent-color);
 }
 
 /* TODO: Link hover. Pop-out/enlarge text maybe? */
 
 /* Highlight color. */
 ::selection {
-  background: var(--secondary-color);
+  background: var(--accent-color);
   /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-  background: var(--secondary-color);
+  background: var(--accent-color);
   /* Gecko Browsers */
 }
 
+/* TODO: Keep font on server and add a google fonts fallback. */
 /* Fonts */
 * {
   font-family: 'Helvetica';

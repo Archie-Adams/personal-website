@@ -72,7 +72,7 @@ h1::before {
 }
 
 .span-dot {
-  color: var(--header-dot-color);
+  color: var(--accent-color);
   font-size: 1.25em;
 }
 
