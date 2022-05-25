@@ -15,11 +15,10 @@
   --dev-color-main: rgb(200, 26, 26);
   --journey-color-main: rgb(59, 137, 168);
 
-  /* TODO: Make these reflect big-socials. */
-  --social-linkedin-color: #0072b1;
-  --social-email-color: #DB4437;
-  --social-github-color: #a36ab1;
-  --social-phone-color: #89d887;
+  --social-linkedin-color: #6eadd4;
+  --social-email-color: #e07768;
+  --social-github-color: #4aada9;
+  --social-phone-color: #997fb2;
 }
 
 /* Link colours. */

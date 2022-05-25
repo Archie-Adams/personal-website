@@ -15,19 +15,19 @@
 }
 
 .large-social-card .icon.email {
-  background: #e07768;
+  background: var(--social-email-color);
 }
 
 .large-social-card .icon.linkedin {
-  background: #6eadd4;
+  background: var(--social-linkedin-color);
 }
 
 .large-social-card .icon.github {
-  background: #4aada9;
+  background: var(--social-github-color);
 }
 
 .large-social-card .icon.telephone {
-  background: #997fb2;
+  background: var(--social-phone-color);
 }
 
 .large-social-card .icon .fa {
@@ -37,7 +37,7 @@
   transform: translate(-50%, -50%);
   font-size: 80px;
   transition: 0.7s;
-  color: #fff;
+  color: var(--card-background);
 }
 
 .large-social-card .icon i {
@@ -47,7 +47,7 @@
   transform: translate(-50%, -50%);
   font-size: 80px;
   transition: 0.7s;
-  color: #fff;
+  color: var(--card-background);
 }
 
 .large-social-card .face {
@@ -59,7 +59,6 @@
 
 .large-social-card .face.face1 {
   position: relative;
-  background: #333;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +73,6 @@
 
 .large-social-card:hover .face.face1 .content {
   opacity: 1;
-  /* cursor: pointer; */
 }
 
 .large-social-card .face.face1 .content i {
@@ -83,13 +81,12 @@
 
 .large-social-card .face.face2 {
   position: relative;
-  background: #fff;
+  color: var(--card-background);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  /* box-shadow: 0 10px 20px rgba(135, 135, 135, 0.8); */
   transform: translateY(-200px);
 }
 
@@ -99,29 +96,38 @@
   border-radius: 15px;
 }
 
-/* TODO: Different direction slide animations on all ones. */
+/* Default animation. */
 .large-social-card:hover .face.face1 {
   transform: translateX(100%);
 }
 
-.large-social-card:hover .face.face2 {
-  /* transform: translateY(-100px); */
-  /* cursor: pointer; */
+/* Animations for specific cards. */
+.large-social-card:hover .face.face1.email {
+  transform: translateX(100%);
+}
+
+.large-social-card:hover .face.face1.linkedin {
+  transform: translateY(100%);
+}
+
+.large-social-card:hover .face.face1.github {
+  transform: translateX(-100%);
+}
+
+.large-social-card:hover .face.face1.telephone {
+  transform: translateY(100%);
 }
 
 .large-social-card .face.face2 .content h3 {
   padding: 0;
   width: 100%;
   height: 100%;
-  /* margin-top: 70%; */
-  color: #fff;
+  color: var(--card-background);
   font-size: 24px;
   text-align: center;
-  color: #414141;
+  color: var(--card-border);
 }
 
 .large-social-card a {
-  text-decoration: none;
-  color: #414141;
-  padding: 2em 0;
+  color: var(--card-border);
 }
