@@ -12,13 +12,13 @@ DEPENDENCES
 }
 
 
-p:not([class]) {
+.timeline p:not([class]) {
   line-height: var(--cssTypographyLineHeight, 1.78);
   margin-top: var(--cssTypographyBasicMargin, 1em);
   margin-bottom: 0;
 }
 
-p:not([class]):first-child {
+.timeline p:not([class]):first-child {
   margin-top: 0;
 }
 
@@ -218,7 +218,30 @@ p:last-child {
 
 .page {
   max-width: 47rem;
-  padding: 5rem 2rem 3rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.h2-container {
+  max-width: 49rem;
+  padding-left: 1rem;
+  margin: auto;
+}
+
+h2 {
+  text-align: left;
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 0;
+  color: var(--card-border);
+}
+
+h3 {
+  font-weight: 500;
 }
