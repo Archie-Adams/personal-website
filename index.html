@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- TODO: IDEA: Need to add small unobtrusive animation details, like bubble tect etc when h3's are hovered. -->
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>archieada.ms</title>
 
-  <!-- TODO: Icon. -->
-  <!-- Icon Idea: Rotating selection of emoji? Animated w/ JS. -->
+  <!-- Site Icon -->
+  <!-- IDEA: Animate icon to show a rocket launch and then pass various planets. -->
+  <!-- https://www.flaticon.com/search?word=planets -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- TODO: Description and social media metadata properties. -->
 
   <link rel="stylesheet" href="css/header.css">
@@ -22,12 +33,15 @@
 
 <body>
 
-  <header>
+  <header class="main">
     <h1>archieada<span class="span-dot">.</span>ms</h1>
     <h2>Computer Science Student</h2>
   </header>
 
+  <!-- TODO: Refactor, some div layers could definitely be removed. -->
   <div class="main-grid-parent">
+    <!-- IDEA: Could have a hidden thin banner card for displaying recent events like an article upload? -->
+    <!-- https://codepen.io/FlorinPop17/pen/dyPvNKK Could have a big NEW ARTICLE int the purple section and the title in the white etc. -->
     <div id="my-projects">
       <div id="my-projects-container" class="card-container">
         <div id="my-projects-text-area">
@@ -36,8 +50,10 @@
 
             <p class="card-text">
               In my spare time I like to develop various applications to improve my productivity, learn new
-              techniques and technologies, or just for the fun of it. They are all open source on <a target="_blank"
-                href="https://github.com/Archie-Adams">my GitHub</a>. Click below to find out what I've built and what
+              techniques and technologies, or just for the fun of it. They are all open source on <a class="link"
+                target="_blank" href="https://github.com/Archie-Adams">my&nbsp;GitHub</a>. Click below to find out what
+              I've
+              built and what
               I'm
               working on next!
             </p>
@@ -53,7 +69,6 @@
             <!-- IMG HERE -->
           </div>
         </div>
-
       </div>
     </div>
     <div id="blog-cv-container">

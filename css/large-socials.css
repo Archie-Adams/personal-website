@@ -99,6 +99,7 @@
   border-radius: 15px;
 }
 
+/* TODO: Different direction slide animations on all ones. */
 .large-social-card:hover .face.face1 {
   transform: translateX(100%);
 }
