@@ -41,6 +41,7 @@ h1::before {
 
 header p {
   text-align: center;
+  margin: 0;
   margin-bottom: var(--sub-header-font-size);
   width: 100%;
   font-size: var(--sub-header-font-size);

@@ -91,7 +91,7 @@ of defining by grid-areas.*/
 .card-container h3 {
   display: inline-block;
   position: relative;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 600;
   color: var(--card-border);
   margin: 0;

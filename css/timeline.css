@@ -35,6 +35,9 @@
 
 .card__content {
   margin-top: .5rem;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  clear: both;
 }
 
 /* skin */
@@ -126,12 +129,11 @@
 
 /* ---------------------------------- Image --------------------------------- */
 
-/* TODO */
 .company-image {
   float: left;
   width: 4rem;
   height: 4rem;
-  border: 1px solid black;
+  border: 1px solid #cbc6c6;
   border-radius: 10px;
   overflow: hidden;
   margin-right: 0.8rem;
@@ -145,19 +147,19 @@
 
 /* ---------------------------------- PAGE ---------------------------------- */
 
-p {
+.timeline p {
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
 
-p:last-child {
+.timeline p:last-child {
   margin-bottom: 0;
 }
 
 .page {
   max-width: 47rem;
-  padding: 1rem 2rem 3rem 2rem;
+  padding: 0 2rem 0 2rem;
   margin: 0 auto;
 }
 
@@ -165,7 +167,7 @@ p:last-child {
 
 .h2-container {
   max-width: 49rem;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
   margin: auto;
 }
 
@@ -179,4 +181,7 @@ h2 {
 
 h3 {
   font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  font-size: 1.7rem;
 }
