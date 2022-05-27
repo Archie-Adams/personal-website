@@ -19,7 +19,37 @@
   overflow: hidden;
   width: 300px;
   border: 2px solid var(--card-border);
+  height: 458px;
   border-radius: 18px;
+}
+
+.card .face {
+  transition: 0.5s;
+}
+
+.card .face.face1 {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-462px);
+}
+
+.card .face.face2 {
+  position: relative;
+  color: white;
+  box-sizing: border-box;
+  transform: translateX(-300px);
+  z-index: 2;
+}
+
+.card .face.face2 img {
+  height: 458px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.card:hover .face.face2,
+.card>a:focus .face.face2 {
+  transform: translateX(0);
 }
 
 .card>a {
@@ -27,13 +57,13 @@
   color: inherit;
 }
 
-.card-header {
+.face.face2 {
   position: relative;
   text-align: center;
   color: white;
 }
 
-.card-header .centred-img-text {
+.face.face2 .centred-img-text {
   position: absolute;
   top: 50%;
   left: 0;
@@ -42,34 +72,12 @@
   font-weight: 600;
   font-size: 3rem;
   text-align: start;
-  opacity: 0;
-  -webkit-transition: opacity 0.7s ease-in;
-  -moz-transition: opacity 0.7s ease-in;
-  -o-transition: opacity 0.7s ease-in;
-  transition: opacity 0.7s ease-in;
+  opacity: 1;
 }
 
 .card-header img {
-  width: 100%;
   height: 200px;
   object-fit: cover;
-  transition: height 0.4s ease-out;
-}
-
-.card:hover .card-header {
-  height: 100%;
-}
-
-.card:hover .card-header img {
-  height: 100%;
-}
-
-.card:hover .card-header .centred-img-text {
-  -webkit-transition: opacity 0.7s ease-in;
-  -moz-transition: opacity 0.7s ease-in;
-  -o-transition: opacity 0.7s ease-in;
-  transition: opacity 0.7s ease-in;
-  opacity: 1;
 }
 
 .card-body {
@@ -78,7 +86,7 @@
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
-  min-height: 250px;
+  height: 258px;
 }
 
 .tag {

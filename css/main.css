@@ -59,7 +59,8 @@ a.link {
   transition: background-size 400ms;
 }
 
-a.link:hover {
+a.link:hover,
+a.link:focus {
   background-size: 0 3px, 100% 3px;
 }
 

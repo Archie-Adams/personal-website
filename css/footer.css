@@ -114,19 +114,23 @@ footer hr {
   }
 }
 
-.socials a:hover:nth-child(1) {
+.socials a:hover:nth-child(1),
+.socials a:focus:nth-child(1) {
   background: var(--social-linkedin-color);
 }
 
-.socials a:hover:nth-child(2) {
+.socials a:hover:nth-child(2),
+.socials a:focus:nth-child(2) {
   background: var(--social-email-color);
 }
 
-.socials a:hover:nth-child(3) {
+.socials a:hover:nth-child(3),
+.socials a:focus:nth-child(3) {
   background: var(--social-github-color);
 }
 
-.socials a:hover:nth-child(4) {
+.socials a:hover:nth-child(4),
+.socials a:focus:nth-child(4) {
   background: var(--social-phone-color);
 }
 

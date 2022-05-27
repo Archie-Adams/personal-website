@@ -106,11 +106,9 @@ nav a .inner {
 }
 
 /* Change properties on hover to indicate clickable to user. */
-nav a:hover {
+nav a:hover,
+nav a:focus {
   background-color: var(--accent-color);
-}
-
-nav a:hover {
   color: var(--card-background);
 }
 

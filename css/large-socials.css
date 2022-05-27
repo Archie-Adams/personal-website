@@ -63,16 +63,6 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
-  transform: translateY(0px);
-}
-
-.large-social-card .face.face1 .content {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.large-social-card:hover .face.face1 .content {
-  opacity: 1;
 }
 
 .large-social-card .face.face1 .content i {
@@ -97,24 +87,29 @@
 }
 
 /* Default animation. */
-.large-social-card:hover .face.face1 {
+.large-social-card:hover .face.face1,
+.large-social-card>a:focus .face.face1 {
   transform: translateX(100%);
 }
 
 /* Animations for specific cards. */
-.large-social-card:hover .face.face1.email {
+.large-social-card:hover .face.face1.email,
+.large-social-card>a:focus .face.face1.email {
   transform: translateX(100%);
 }
 
-.large-social-card:hover .face.face1.linkedin {
+.large-social-card:hover .face.face1.linkedin,
+.large-social-card>a:focus .face.face1.linkedin {
   transform: translateY(100%);
 }
 
-.large-social-card:hover .face.face1.github {
+.large-social-card:hover .face.face1.github,
+.large-social-card>a:focus .face.face1.github {
   transform: translateX(-100%);
 }
 
-.large-social-card:hover .face.face1.telephone {
+.large-social-card:hover .face.face1.telephone,
+.large-social-card>a:focus .face.face1.telephone {
   transform: translateY(100%);
 }
 
