@@ -13,6 +13,12 @@
   gap: 1rem;
 }
 
+@media screen and (max-width: 430px) {
+  .container {
+    margin-left: calc((100vw - 300px - 1rem)/2);
+  }
+}
+
 .card {
   margin: 10px;
   background-color: #fff;
