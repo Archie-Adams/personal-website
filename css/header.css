@@ -10,8 +10,8 @@
 @media screen and (max-width: 810px) {
   :root {
     --header-font-size: 14vw;
-    --header-before-font-size: 2.8vw;
-    --sub-header-font-size: 3.8vw;
+    --header-before-font-size: max(1rem, 2.8vw);
+    --sub-header-font-size: max(1rem, 3.8vw);
   }
 }
 
@@ -27,7 +27,7 @@ header.main {
 h1 {
   color: var(--header-color);
   font-size: var(--header-font-size);
-  margin: 5rem 0.8rem 0;
+  margin: calc(var(--header-font-size) - var(--header-before-font-size)) 0.8rem 0;
   text-align: center;
   width: 100%;
 }
@@ -36,7 +36,7 @@ h1::before {
   content: 'Hi there 👋, I\'m';
   position: absolute;
   font-size: var(--header-before-font-size);
-  top: 4rem;
+  top: calc(var(--header-font-size) - var(--header-before-font-size) * 2);
 }
 
 header p {

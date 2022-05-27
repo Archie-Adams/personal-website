@@ -1,3 +1,14 @@
+// TODO: Turn into a game where player can move rocket up/down/left/right.
+//  - World background is one image that gets clipped on each move.
+//  - Player has a speed, which corresponds to the timeout interval.
+//  - WASD control direction, FR control speed up/down, X to exit, SPACE to perform action.
+//  - Easter egg to unlock game? Or just link in the footer?
+//  - Game idea: planets are in a circle around rocket, title is a timer, fastest to move to and perform action on a planet is high-score.
+//  - Game idea: text based RPG where rocket has to go to certain planets whilst the title tells a story in checkpoints at each action.
+//  - Game idea: each planet corresponds to a game, have multiple and the 'space area' is a hub to select which favicon game to play.
+//    - Snake, Maze, Pac-Man, Dino, Flappy Birds
+//    - Would have to make code more generic and robust.
+
 window.onload = function () {
 
   // Create the canvas.
@@ -40,6 +51,8 @@ window.onload = function () {
 
   loadImages();
 
+  // TODO: post new url using postMessage and change hrefs in main script when
+  // this code becomes a web worker.
   // Modified to change href of all with class.
   function setFavicon() {
     var favicons = document.getElementsByClassName("animate-icon-href");
@@ -64,7 +77,7 @@ window.onload = function () {
     window.setInterval(function () {
       currentState();
       setFavicon();
-    }, 100);
+    }, 90);
   }
 
   // Globals.

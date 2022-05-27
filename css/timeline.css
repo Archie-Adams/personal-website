@@ -8,6 +8,10 @@
   display: inline-flex;
 }
 
+.location {
+  margin-top: .5em;
+}
+
 .time__month {
   margin-left: .25em;
 }
@@ -23,7 +27,6 @@
   text-transform: var(--timeTextTransform, uppercase);
   color: var(--timeColor, currentColor);
 }
-
 
 /* ----------------------------- Card Component ----------------------------- */
 
@@ -184,4 +187,5 @@ h3 {
   margin-bottom: 0;
   margin-top: 1rem;
   font-size: 1.7rem;
+  clear: both;
 }
