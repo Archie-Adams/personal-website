@@ -1,284 +1,403 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>archieada.ms</title>
+<style>
+  /* ----------------------------- Time Component ----------------------------- */
 
-  <!-- Site Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" class="animate-icon-href" href="images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" class="animate-icon-href" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" class="animate-icon-href" href="images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="images/favicon/site.webmanifest">
-  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  /* core styles */
 
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/timeline.css">
-  <link rel="stylesheet" href="css/footer.css">
+  .time {
+    display: inline-flex;
+  }
 
-  <script src="https://kit.fontawesome.com/7242e2f119.js" crossorigin="anonymous"></script>
+  .location {
+    margin-top: .5em;
+  }
 
-  <script src="js/icon-animation.js"></script>
-</head>
+  .time__month {
+    margin-left: .25em;
+  }
 
-<body>
+  /* skin */
 
-  <header class="main">
-    <h1 id="h1">archieada<span class="span-dot">.</span>ms</h1>
-    <p>Computer Science Student</p>
-    <nav>
-      <a href="/">
-        <div class="inner">Home</div>
-      </a>
-      <a href="/projects">
-        <div class="inner">My Projects</div>
-      </a>
-      <a href="/blog">
-        <div class="inner">Blog</div>
-      </a>
-    </nav>
-  </header>
+  .time {
+    padding: var(--timePadding, .25rem 1.25rem .25rem);
+    background-color: #f0f0f0;
 
-  <div class="h2-container">
-    <h2>Timeline</h2>
-  </div>
-  <div class="page">
-    <div class="timeline">
-      <div class="timeline__group">
-        <span class="timeline__year time" aria-hidden="true">2022</span>
-        <div class="timeline__cards">
-          <div class="timeline__card card">
-            <header class="card__header">
-              <div class="company-image">
-                <img src="images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
-              </div>
-              <time class="time" datetime="2022-06-01">
-                <span class="time__month">June - August</span>
-              </time>
-              <br>
-              <div class="time location">
-                London, UK
-              </div>
-              <h3>
-                <a class="link" href="https://www.pwc.com">PwC</a> | Software Developer Intern
-              </h3>
-            </header>
-            <div class="card__content">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, voluptas. Ipsam itaque consequuntur
-                nulla consequatur similique est officia, sit hic.</p>
-              <ul>
-                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae totam eius provident obcaecati
-                  a dolores?</li>
-                <li>Non voluptatibus quas doloribus facilis, illo debitis vitae deleniti eveniet voluptates facere qui!
-                  Quam, facere?</li>
-                <li>Ipsam alias rerum expedita quo itaque, magnam doloremque? Officiis, aliquid soluta fugiat ipsam sint
-                  incidunt!</li>
-                <li>Harum, minus suscipit! Ab error facilis temporibus dicta cumque laboriosam neque, reprehenderit quos
-                  rerum nemo.</li>
-                <li>Facilis, perferendis laborum ad vel molestiae, consequatur neque incidunt culpa possimus nisi facere
-                  cumque fugiat?</li>
-              </ul>
+    font-size: var(--timeFontSize, .75rem);
+    font-weight: var(--timeFontWeight, 700);
+    text-transform: var(--timeTextTransform, uppercase);
+    color: var(--timeColor, currentColor);
+  }
+
+  /* ----------------------------- Card Component ----------------------------- */
+
+  /* core styles */
+
+  .card {
+    padding: 1.5rem 1.5rem 1.25rem;
+  }
+
+  .card__content {
+    margin-top: .5rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    clear: both;
+  }
+
+  /* skin */
+
+  .card {
+    border-radius: 2px;
+    border-left: 3px solid var(--uiTimelineMainColor);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+    background-color: #fff;
+  }
+
+  /* ------------------------------- CORE STYLES ------------------------------ */
+
+  .timeline {
+    display: grid;
+    grid-row-gap: 2rem;
+  }
+
+  /*
+1. If timeline__year isn't displayed the gap between it and timeline__cards isn't displayed too
+*/
+
+  .timeline__year {
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+    font-size: 1rem;
+    /* 1 */
+  }
+
+  .timeline__cards {
+    display: var(--timeloneCardsDisplay, grid);
+    grid-row-gap: var(--timeloneCardsGap, 1.5rem);
+  }
+
+
+  /* SKIN */
+
+  .timeline {
+    --uiTimelineMainColor: var(--timelineMainColor, #222);
+    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+
+    border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .timeline__year {
+    --timePadding: .5rem 1.5rem;
+    --timeColor: var(--uiTimelineSecondaryColor);
+    background-color: var(--accent-color);
+  }
+
+  .timeline__card {
+    position: relative;
+    margin-left: 1rem;
+  }
+
+  /* 1. Stopping cut box shadow */
+  .timeline__cards {
+    overflow: hidden;
+    padding-top: .25rem;
+    /* 1 */
+    padding-bottom: .25rem;
+    /* 1 */
+  }
+
+  .timeline__card::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--uiTimelineMainColor);
+
+    position: absolute;
+    top: 1rem;
+    left: -50%;
+    z-index: -1;
+  }
+
+  /* -------------------------------------------------------------------------- */
+
+
+  /* -------------------------------- SETTINGS -------------------------------- */
+
+  .timeline {
+    --timelineMainColor: var(--accent-color);
+  }
+
+  /* -------------------------------------------------------------------------- */
+
+  /* ---------------------------------- Image --------------------------------- */
+
+  .company-image {
+    float: left;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #cbc6c6;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .company-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* ---------------------------------- PAGE ---------------------------------- */
+
+  .timeline p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .timeline p:last-child {
+    margin-bottom: 0;
+  }
+
+  .page {
+    max-width: 47rem;
+    padding: 0 2rem 0 2rem;
+    margin: 0 auto;
+  }
+
+  /* -------------------------------------------------------------------------- */
+
+  .h2-container {
+    max-width: 49rem;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: left;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-top: 0;
+    color: var(--card-border);
+  }
+
+  h3 {
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    clear: both;
+    color: var(--card-border);
+  }
+</style>
+
+<div class="h2-container">
+  <h2>Timeline</h2>
+</div>
+<div class="page">
+  <div class="timeline">
+    <div class="timeline__group">
+      <span class="timeline__year time" aria-hidden="true">2022</span>
+      <div class="timeline__cards">
+        <div class="timeline__card card">
+          <header class="card__header">
+            <div class="company-image">
+              <img src="images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
             </div>
+            <time class="time" datetime="2022-06-01">
+              <span class="time__month">June - August</span>
+            </time>
+            <br>
+            <div class="time location">
+              London, UK
+            </div>
+            <h3>
+              <a class="link" href="https://www.pwc.com">PwC</a> | Software Developer Intern
+            </h3>
+          </header>
+          <div class="card__content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, voluptas. Ipsam itaque consequuntur
+              nulla consequatur similique est officia, sit hic.</p>
+            <ul>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae totam eius provident obcaecati
+                a dolores?</li>
+              <li>Non voluptatibus quas doloribus facilis, illo debitis vitae deleniti eveniet voluptates facere qui!
+                Quam, facere?</li>
+              <li>Ipsam alias rerum expedita quo itaque, magnam doloremque? Officiis, aliquid soluta fugiat ipsam sint
+                incidunt!</li>
+              <li>Harum, minus suscipit! Ab error facilis temporibus dicta cumque laboriosam neque, reprehenderit quos
+                rerum nemo.</li>
+              <li>Facilis, perferendis laborum ad vel molestiae, consequatur neque incidunt culpa possimus nisi facere
+                cumque fugiat?</li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="timeline__group">
-        <span class="timeline__year time" aria-hidden="true">2021</span>
-        <div class="timeline__cards">
-          <div class="timeline__card card">
-            <header class="card__header">
-              <div class="company-image">
-                <img src="images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
-              </div>
-              <time class="time" datetime="2021-06-01">
-                <span class="time__month">June - August</span>
-              </time>
-              <br>
-              <div class="time location">
-                London, UK
-              </div>
-              <h3>
-                <a class="link" href="https://www.pwc.com">PwC</a> | Tax Transformation & Technology Intern
-              </h3>
-            </header>
-            <div class="card__content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum earum, ipsa architecto sapiente ipsum
-                nemo provident eum tempora. Omnis, eligendi veniam mollitia totam voluptates blanditiis dolorum dolorem
-                rem repellat saepe iste officia quia eos cum modi nemo. Aliquid, earum autem?</p>
-              <ul>
-                <li>Development in Google Apps Script to automate report generation.</li>
-                <li>Developing an app with Microsoft Power Platform to collect large amounts of data and generate
-                  reports.
-                </li>
-                <li>Achieved Alteryx Designer Core Certification.</li>
-                <li>Presenting and demoing projects to the team and senior stakeholders.</li>
-              </ul>
+    </div>
+    <div class="timeline__group">
+      <span class="timeline__year time" aria-hidden="true">2021</span>
+      <div class="timeline__cards">
+        <div class="timeline__card card">
+          <header class="card__header">
+            <div class="company-image">
+              <img src="images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
             </div>
+            <time class="time" datetime="2021-06-01">
+              <span class="time__month">June - August</span>
+            </time>
+            <br>
+            <div class="time location">
+              London, UK
+            </div>
+            <h3>
+              <a class="link" href="https://www.pwc.com">PwC</a> | Tax Transformation & Technology Intern
+            </h3>
+          </header>
+          <div class="card__content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum earum, ipsa architecto sapiente ipsum
+              nemo provident eum tempora. Omnis, eligendi veniam mollitia totam voluptates blanditiis dolorum dolorem
+              rem repellat saepe iste officia quia eos cum modi nemo. Aliquid, earum autem?</p>
+            <ul>
+              <li>Development in Google Apps Script to automate report generation.</li>
+              <li>Developing an app with Microsoft Power Platform to collect large amounts of data and generate
+                reports.
+              </li>
+              <li>Achieved Alteryx Designer Core Certification.</li>
+              <li>Presenting and demoing projects to the team and senior stakeholders.</li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="timeline__group">
-        <span class="timeline__year time" aria-hidden="true">2020</span>
-        <div class="timeline__cards">
-          <div class="timeline__card card">
-            <header class="card__header">
-              <div class="company-image">
-                <img src="images/companies/UoL.jpg" alt="The logo of the University of Leeds.">
-              </div>
-              <div class="company-image">
-                <img src="images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
-              </div>
-              <time class="time" datetime="2020-07-01">
-                <span class="time__month">July - ONGOING (2024)</span>
-              </time>
-              <br>
-              <div class="time location">
-                Leeds, UK
-              </div>
-              <h3>
-                <a class="link" target="_blank" href="https://www.leeds.ac.uk">Universiy of Leeds</a> | PwC Flying
-                Start Sponsership -
-                Computer Science BSc.
-              </h3>
-            </header>
-            <div class="card__content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequuntur accusantium iste,
-                illum temporibus laboriosam pariatur harum ipsa aliquid quisquam labore? Impedit laboriosam repellendus
-                deserunt veniam ducimus excepturi accusamus sequi, corrupti fuga. Rem explicabo excepturi doloremque sed
-                velit aperiam et.</p>
+    </div>
+    <div class="timeline__group">
+      <span class="timeline__year time" aria-hidden="true">2020</span>
+      <div class="timeline__cards">
+        <div class="timeline__card card">
+          <header class="card__header">
+            <div class="company-image">
+              <img src="images/companies/UoL.jpg" alt="The logo of the University of Leeds.">
             </div>
+            <div class="company-image">
+              <img src="images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
+            </div>
+            <time class="time" datetime="2020-07-01">
+              <span class="time__month">July - ONGOING (2024)</span>
+            </time>
+            <br>
+            <div class="time location">
+              Leeds, UK
+            </div>
+            <h3>
+              <a class="link" target="_blank" href="https://www.leeds.ac.uk">Universiy of Leeds</a> | PwC Flying
+              Start Sponsership -
+              Computer Science BSc.
+            </h3>
+          </header>
+          <div class="card__content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequuntur accusantium iste,
+              illum temporibus laboriosam pariatur harum ipsa aliquid quisquam labore? Impedit laboriosam repellendus
+              deserunt veniam ducimus excepturi accusamus sequi, corrupti fuga. Rem explicabo excepturi doloremque sed
+              velit aperiam et.</p>
           </div>
-          <div class="timeline__card card">
-            <header class="card__header">
-              <div class="company-image">
-                <img src="images/companies/t&f.jpg" alt="The logo of the University of Leeds.">
-              </div>
-              <time class="time" datetime="2020-07-01">
-                <span class="time__month">July - September</span>
-              </time>
-              <br>
-              <div class="time location">
-                Virtual/Remote
-              </div>
-              <h3>
-                <a class="link" target="_blank" href="https://taylorandfrancis.com/">Taylor & Francis</a> | Search
-                Engine Optimization & Marketing Intern
-              </h3>
-            </header>
-            <div class="card__content">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta ducimus aliquam voluptatem, libero
-                amet tempora!</p>
-              <ul>
-                <li>Using SEMrush to find high value keywords to improve site ranking in search engine results.</li>
-                <li>Creating Alt-Tag text for images to improve our sites accessibility and ranking in image searches.
-                </li>
-                <li>Researching products to find information/sites which is used to improve our pages E.A.T, link equity
-                </li>
-                and page authority.
-              </ul>
+        </div>
+        <div class="timeline__card card">
+          <header class="card__header">
+            <div class="company-image">
+              <img src="images/companies/t&f.jpg" alt="The logo of the University of Leeds.">
             </div>
+            <time class="time" datetime="2020-07-01">
+              <span class="time__month">July - September</span>
+            </time>
+            <br>
+            <div class="time location">
+              Virtual/Remote
+            </div>
+            <h3>
+              <a class="link" target="_blank" href="https://taylorandfrancis.com/">Taylor & Francis</a> | Search
+              Engine Optimization & Marketing Intern
+            </h3>
+          </header>
+          <div class="card__content">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta ducimus aliquam voluptatem, libero
+              amet tempora!</p>
+            <ul>
+              <li>Using SEMrush to find high value keywords to improve site ranking in search engine results.</li>
+              <li>Creating Alt-Tag text for images to improve our sites accessibility and ranking in image searches.
+              </li>
+              <li>Researching products to find information/sites which is used to improve our pages E.A.T, link equity
+              </li>
+              and page authority.
+            </ul>
           </div>
         </div>
       </div>
-      <div class="timeline__group">
-        <span class="timeline__year time" aria-hidden="true">2019</span>
-        <div class="timeline__cards">
-          <div class="timeline__card card">
-            <header class="card__header">
-              <div class="company-image">
-                <img src="images/companies/plusnet.jpg" alt="The logo of the University of Leeds.">
-              </div>
-              <time class="time" datetime="2019-07-01" style="min-width:90px;">
-                <span class="time__month">July</span>
-              </time>
-              <br>
-              <div class="time location">
-                Sheffield, UK
-              </div>
-              <h3>
-                <a class="link" target="_blank" href="https://www.plus.net/">Plusnet</a> | Software Developer
-                Intern
-              </h3>
-            </header>
-            <div class="card__content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolores inventore est animi.</p>
-              <ul>
-                <li>Programming in java</li>
-                <li>Using Selenium to make automated tests</li>
-                <li>Using git for project source control</li>
-                <li>Using IntelliJ IDEA for development</li>
-                <li>Following agile programming practices</li>
-                <li>Shadowing experienced developers</li>
-                <li>Using Jira ticketing system</li>
-              </ul>
+    </div>
+    <div class="timeline__group">
+      <span class="timeline__year time" aria-hidden="true">2019</span>
+      <div class="timeline__cards">
+        <div class="timeline__card card">
+          <header class="card__header">
+            <div class="company-image">
+              <img src="images/companies/plusnet.jpg" alt="The logo of the University of Leeds.">
             </div>
+            <time class="time" datetime="2019-07-01" style="min-width:90px;">
+              <span class="time__month">July</span>
+            </time>
+            <br>
+            <div class="time location">
+              Sheffield, UK
+            </div>
+            <h3>
+              <a class="link" target="_blank" href="https://www.plus.net/">Plusnet</a> | Software Developer
+              Intern
+            </h3>
+          </header>
+          <div class="card__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolores inventore est animi.</p>
+            <ul>
+              <li>Programming in java</li>
+              <li>Using Selenium to make automated tests</li>
+              <li>Using git for project source control</li>
+              <li>Using IntelliJ IDEA for development</li>
+              <li>Following agile programming practices</li>
+              <li>Shadowing experienced developers</li>
+              <li>Using Jira ticketing system</li>
+            </ul>
           </div>
-          <div class="timeline__card card">
-            <header class="card__header">
-              <div class="company-image">
-                <img src="images/companies/nuom.jpg" alt="The logo of the University of Leeds.">
-              </div>
-              <time class="time" datetime="2019-07-01" style="min-width:108px;">
-                <span class="time__month">July</span>
-              </time>
-              <br>
-              <div class="time location">
-                Nottingham, UK
-              </div>
-              <h3>
-                <a class="link" target="_blank" href="https://www.nuom.co.uk/">nuom</a> | Web/App Developer Intern
-              </h3>
-            </header>
-            <div class="card__content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolores inventore est animi.</p>
-              <ul>
-                <li>Development with Ionic Angular</li>
-                <li>Using HTML and CSS for UI design</li>
-                <li>Integrating Google Firebase into my project</li>
-                <li>Using git for source control</li>
-                <li>Using Jira ticketing system</li>
-                <li>Shadowing experienced developers</li>
-                <li>Wireframing app UI designs</li>
-              </ul>
+        </div>
+        <div class="timeline__card card">
+          <header class="card__header">
+            <div class="company-image">
+              <img src="images/companies/nuom.jpg" alt="The logo of the University of Leeds.">
             </div>
+            <time class="time" datetime="2019-07-01" style="min-width:108px;">
+              <span class="time__month">July</span>
+            </time>
+            <br>
+            <div class="time location">
+              Nottingham, UK
+            </div>
+            <h3>
+              <a class="link" target="_blank" href="https://www.nuom.co.uk/">nuom</a> | Web/App Developer Intern
+            </h3>
+          </header>
+          <div class="card__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolores inventore est animi.</p>
+            <ul>
+              <li>Development with Ionic Angular</li>
+              <li>Using HTML and CSS for UI design</li>
+              <li>Integrating Google Firebase into my project</li>
+              <li>Using git for source control</li>
+              <li>Using Jira ticketing system</li>
+              <li>Shadowing experienced developers</li>
+              <li>Wireframing app UI designs</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
-  <footer>
-    <hr>
-    <div class="flex-container">
-      <div class="socials">
-        <div class="item">
-          <p>Contacts and Socials:</p>
-        </div>
-        <div class="item">
-          <a target="_blank" href="https://www.linkedin.com/in/archie-adams"><i class="fab fa-linkedin"></i></a>
-          <a target="_blank" href="mailto:archiea2002@gmail.com"><i class="fas fa-envelope"></i></a>
-          <a target="_blank" href="https://github.com/Archie-Adams"><i class="fab fa-github"></i></a>
-          <a target="_blank" href="tel:+447783620835"><i class="fas fa-phone"></i></a>
-        </div>
-      </div>
-      <div class="cv-download">
-        <p>Curriculum Vitae:</p>
-        <div>
-          <a target="_blank" class="link" href="/archie-adams-cv.pdf"><i class=" fas fa-download"></i> Download
-            (.pdf)</a>
-        </div>
-      </div>
-    </div>
-    <ul>
-      <li><a class="link" href="acknowledgements">acknowledgements</a></li>
-      <li><a class="link" href="timeline#h1">back to top</a></li>
-    </ul>
-
-  </footer>
-
-</body>
+</div>

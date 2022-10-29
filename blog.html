@@ -1,167 +1,123 @@
-<!-- For blog site -->
-<!-- https://codepen.io/ericmahoney/pen/oNLMOYw -->
+---
+layout: default
+---
 
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="/assets/css/blog-cards.css">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>archieada.ms</title>
+<div class="container">
 
-  <!-- Site Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" class="animate-icon-href" href="images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" class="animate-icon-href" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" class="animate-icon-href" href="images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="images/favicon/site.webmanifest">
-  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  {% for post in site.posts %}
+  <div class="card">
+    <a href="{{ post.url | relative_url }}">
+      <div class="face face2">
+        <img src="{{ post.cover_img }}" alt="{{ post.cover_img_alt }}" />
+        <div class="centred-img-text">{{ post.title }}</div>
+      </div>
+      <div class="face face1">
+        <div class="card-header">
+          <img src="{{ post.cover_img }}" alt="{{ post.cover_img_alt }}" />
+        </div>
+        <div class="card-body">
+          <div>
+            <!-- TODO: Add if exists statements for tags. -->
+            <span class="tag tag-{{ post.tag1_col }}">{{ post.tag1 }}</span>
+            <span class="tag tag-{{ post.tag2_col }}">{{ post.tag2 }}</span>
+          </div>
+          <h4>{{ post.title }}</h4>
+          <p>{{ post.description }}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
 
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/blog-cards.css">
-  <link rel="stylesheet" href="css/footer.css">
-
-  <script src="https://kit.fontawesome.com/7242e2f119.js" crossorigin="anonymous"></script>
-
-  <script src="js/icon-animation.js"></script>
-</head>
-
-<body>
-
-  <header class="main">
-    <h1 id="h1">archieada<span class="span-dot">.</span>ms</h1>
-    <p>Computer Science Student</p>
-    <nav>
-      <a href="/">
-        <div class="inner">Home</div>
-      </a>
-      <a href="/projects">
-        <div class="inner">My Projects</div>
-      </a>
-      <a href="/timeline">
-        <div class="inner">Timeline</div>
-      </a>
-    </nav>
-  </header>
+</div>
 
 
-  <div class="container">
-    <div class="card">
-      <a href="./blog/article-coming-soon">
-        <div class="face face2">
+<!-- TODO: Use data to make new article stubs -->
+<!-- <div class="container">
+  <div class="card">
+    <a href="./blog/article-coming-soon">
+      <div class="face face2">
+        <img
+          src="https://assets.reedpopcdn.com/digitalfoundry-best-mechanical-keyboard-for-gaming-typing-coding-7008-1641577436931.jpg/BROK/thumbnail/1600x900/quality/100/digitalfoundry-best-mechanical-keyboard-for-gaming-typing-coding-7008-1641577436931.jpg"
+          alt="rover" />
+        <div class="centred-img-text">Creating a custom keyboard layout that's perfect for you.</div>
+      </div>
+      <div class="face face1">
+        <div class="card-header">
           <img
             src="https://assets.reedpopcdn.com/digitalfoundry-best-mechanical-keyboard-for-gaming-typing-coding-7008-1641577436931.jpg/BROK/thumbnail/1600x900/quality/100/digitalfoundry-best-mechanical-keyboard-for-gaming-typing-coding-7008-1641577436931.jpg"
             alt="rover" />
-          <div class="centred-img-text">Creating a custom keyboard layout that's perfect for you.</div>
         </div>
-        <div class="face face1">
-          <div class="card-header">
-            <img
-              src="https://assets.reedpopcdn.com/digitalfoundry-best-mechanical-keyboard-for-gaming-typing-coding-7008-1641577436931.jpg/BROK/thumbnail/1600x900/quality/100/digitalfoundry-best-mechanical-keyboard-for-gaming-typing-coding-7008-1641577436931.jpg"
-              alt="rover" />
+        <div class="card-body">
+          <div>
+            <span class="tag tag-teal">Keyboards</span>
+            <span class="tag tag-green">Hardware</span>
           </div>
-          <div class="card-body">
-            <div>
-              <span class="tag tag-teal">Keyboards</span>
-              <span class="tag tag-green">Hardware</span>
-            </div>
-            <h4>
-              Creating a custom keyboard layout that's perfect for you.
-            </h4>
-            <p>
-              Have you ever wondered what is at the extreme edge of layout customisation, macros, keyboard firmware
-              alteration?
-            </p>
-          </div>
+          <h4>
+            Creating a custom keyboard layout that's perfect for you.
+          </h4>
+          <p>
+            Have you ever wondered what is at the extreme edge of layout customisation, macros, keyboard firmware
+            alteration?
+          </p>
         </div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="">
-        <div class="face face2">
-          <img src="./images/keyboard-shortcut-map-maker.png" alt="rover" />
-          <div class="centred-img-text">My project to map the layout of my custom keyboard shortcuts.</div>
-        </div>
-        <div class="face face1">
-          <div class="card-header">
-            <img src="./images/keyboard-shortcut-map-maker.png" alt="ballons" />
-          </div>
-          <div class="card-body">
-            <div>
-              <span class="tag tag-teal">Keyboards</span>
-              <span class="tag tag-pink">Software</span>
-            </div>
-            <h4>
-              My project to map the layout of my custom keyboard shortcuts.
-            </h4>
-            <p>
-              After creating a collection of AutoHotKey scripts with hundreds of shortcuts I wanted to be able to easily
-              produce graphics of how they were assigned. When I couldn't find a tool that suited my needs -
-              I built one myself.
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="">
-        <div class="face face2">
-          <img src="https://i.pinimg.com/originals/2d/8b/99/2d8b9916ca7f79a029096254e27e3baf.png" alt="rover" />
-          <div class="centred-img-text">Switching to linux for productivity and a custom OS - My Journey.</div>
-        </div>
-        <div class="face face1">
-          <div class="card-header">
-            <img src="https://i.pinimg.com/originals/2d/8b/99/2d8b9916ca7f79a029096254e27e3baf.png" alt="city" />
-          </div>
-          <div class="card-body">
-            <div>
-              <span class="tag tag-yellow">Linux</span>
-              <span class="tag tag-red">Productivity</span>
-            </div>
-            <h4>
-              Switching to linux for productivity and a custom OS - My Journey.
-            </h4>
-            <p>
-              I've been a Windows user all my life, but after learning more about Linux I wanted to experiment with
-              building out my own OS experience from the ground up to suit my own
-              productivity needs exactly.
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
+      </div>
+    </a>
   </div>
-
-
-  <footer>
-    <hr>
-    <div class="flex-container">
-      <div class="socials">
-        <div class="item">
-          <p>Contacts and Socials:</p>
+  <div class="card">
+    <a href="">
+      <div class="face face2">
+        <img src="./images/keyboard-shortcut-map-maker.png" alt="rover" />
+        <div class="centred-img-text">My project to map the layout of my custom keyboard shortcuts.</div>
+      </div>
+      <div class="face face1">
+        <div class="card-header">
+          <img src="./images/keyboard-shortcut-map-maker.png" alt="ballons" />
         </div>
-        <div class="item">
-          <a target="_blank" href="https://www.linkedin.com/in/archie-adams"><i class="fab fa-linkedin"></i></a>
-          <a target="_blank" href="mailto:archiea2002@gmail.com"><i class="fas fa-envelope"></i></a>
-          <a target="_blank" href="https://github.com/Archie-Adams"><i class="fab fa-github"></i></a>
-          <a target="_blank" href="tel:+447783620835"><i class="fas fa-phone"></i></a>
+        <div class="card-body">
+          <div>
+            <span class="tag tag-teal">Keyboards</span>
+            <span class="tag tag-pink">Software</span>
+          </div>
+          <h4>
+            My project to map the layout of my custom keyboard shortcuts.
+          </h4>
+          <p>
+            After creating a collection of AutoHotKey scripts with hundreds of shortcuts I wanted to be able to easily
+            produce graphics of how they were assigned. When I couldn't find a tool that suited my needs -
+            I built one myself.
+          </p>
         </div>
       </div>
-      <div class="cv-download">
-        <p>Curriculum Vitae:</p>
-        <div>
-          <a target="_blank" class="link" href="/archie-adams-cv.pdf"><i class=" fas fa-download"></i> Download
-            (.pdf)</a>
+    </a>
+  </div>
+  <div class="card">
+    <a href="">
+      <div class="face face2">
+        <img src="https://i.pinimg.com/originals/2d/8b/99/2d8b9916ca7f79a029096254e27e3baf.png" alt="rover" />
+        <div class="centred-img-text">Switching to linux for productivity and a custom OS - My Journey.</div>
+      </div>
+      <div class="face face1">
+        <div class="card-header">
+          <img src="https://i.pinimg.com/originals/2d/8b/99/2d8b9916ca7f79a029096254e27e3baf.png" alt="city" />
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="tag tag-yellow">Linux</span>
+            <span class="tag tag-red">Productivity</span>
+          </div>
+          <h4>
+            Switching to linux for productivity and a custom OS - My Journey.
+          </h4>
+          <p>
+            I've been a Windows user all my life, but after learning more about Linux I wanted to experiment with
+            building out my own OS experience from the ground up to suit my own
+            productivity needs exactly.
+          </p>
         </div>
       </div>
-    </div>
-    <ul>
-      <li><a class="link" href="acknowledgements">acknowledgements</a></li>
-      <li><a class="link" href="blog#h1">back to top</a></li>
-    </ul>
-
-  </footer>
-
-</body>
+    </a>
+  </div>
+</div> -->
