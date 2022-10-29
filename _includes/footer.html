@@ -191,6 +191,13 @@
     display: inline-block;
   }
 
+  @media screen and (max-width: 560px) {
+    footer ul {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
   /* Override default link style class. */
   footer ul li a {
     color: var(--accent-color) !important;
