@@ -20,9 +20,9 @@ permalink: /blog
         </div>
         <div class="card-body">
           <div>
-            <!-- TODO: Add if exists statements for tags. -->
-            <span class="tag tag-{{ post.tag1_col }}">{{ post.tag1 }}</span>
-            <span class="tag tag-{{ post.tag2_col }}">{{ post.tag2 }}</span>
+            {% for pill in post.pills %}
+            <span class="tag tag-{{ pill.color }}">{{ pill.text }}</span>
+            {% endfor %}
           </div>
           <h4>{{ post.title }}</h4>
           <p>{{ post.description }}</p>
