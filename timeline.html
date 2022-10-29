@@ -2,197 +2,7 @@
 layout: default
 ---
 
-<style>
-  /* ----------------------------- Time Component ----------------------------- */
-
-  /* core styles */
-
-  .time {
-    display: inline-flex;
-  }
-
-  .location {
-    margin-top: .5em;
-  }
-
-  .time__month {
-    margin-left: .25em;
-  }
-
-  /* skin */
-
-  .time {
-    padding: var(--timePadding, .25rem 1.25rem .25rem);
-    background-color: #f0f0f0;
-
-    font-size: var(--timeFontSize, .75rem);
-    font-weight: var(--timeFontWeight, 700);
-    text-transform: var(--timeTextTransform, uppercase);
-    color: var(--timeColor, currentColor);
-  }
-
-  /* ----------------------------- Card Component ----------------------------- */
-
-  /* core styles */
-
-  .card {
-    padding: 1.5rem 1.5rem 1.25rem;
-  }
-
-  .card__content {
-    margin-top: .5rem;
-    line-height: 1.5;
-    font-size: 1.2rem;
-    clear: both;
-  }
-
-  /* skin */
-
-  .card {
-    border-radius: 2px;
-    border-left: 3px solid var(--uiTimelineMainColor);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
-    background-color: #fff;
-  }
-
-  /* ------------------------------- CORE STYLES ------------------------------ */
-
-  .timeline {
-    display: grid;
-    grid-row-gap: 2rem;
-  }
-
-  /*
-1. If timeline__year isn't displayed the gap between it and timeline__cards isn't displayed too
-*/
-
-  .timeline__year {
-    margin-bottom: 1.25rem;
-    font-weight: 500;
-    font-size: 1rem;
-    /* 1 */
-  }
-
-  .timeline__cards {
-    display: var(--timeloneCardsDisplay, grid);
-    grid-row-gap: var(--timeloneCardsGap, 1.5rem);
-  }
-
-
-  /* SKIN */
-
-  .timeline {
-    --uiTimelineMainColor: var(--timelineMainColor, #222);
-    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
-
-    border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .timeline__year {
-    --timePadding: .5rem 1.5rem;
-    --timeColor: var(--uiTimelineSecondaryColor);
-    background-color: var(--accent-color);
-  }
-
-  .timeline__card {
-    position: relative;
-    margin-left: 1rem;
-  }
-
-  /* 1. Stopping cut box shadow */
-  .timeline__cards {
-    overflow: hidden;
-    padding-top: .25rem;
-    /* 1 */
-    padding-bottom: .25rem;
-    /* 1 */
-  }
-
-  .timeline__card::before {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: var(--uiTimelineMainColor);
-
-    position: absolute;
-    top: 1rem;
-    left: -50%;
-    z-index: -1;
-  }
-
-  /* -------------------------------------------------------------------------- */
-
-
-  /* -------------------------------- SETTINGS -------------------------------- */
-
-  .timeline {
-    --timelineMainColor: var(--accent-color);
-  }
-
-  /* -------------------------------------------------------------------------- */
-
-  /* ---------------------------------- Image --------------------------------- */
-
-  .company-image {
-    float: left;
-    width: 4rem;
-    height: 4rem;
-    border: 1px solid #cbc6c6;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-right: 0.8rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .company-image img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  /* ---------------------------------- PAGE ---------------------------------- */
-
-  .timeline p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  }
-
-  .timeline p:last-child {
-    margin-bottom: 0;
-  }
-
-  .page {
-    max-width: 47rem;
-    padding: 0 2rem 0 2rem;
-    margin: 0 auto;
-  }
-
-  /* -------------------------------------------------------------------------- */
-
-  .h2-container {
-    max-width: 49rem;
-    margin: auto;
-  }
-
-  h2 {
-    text-align: left;
-    font-weight: 600;
-    font-size: 2.5rem;
-    margin-top: 0;
-    color: var(--card-border);
-  }
-
-  h3 {
-    font-weight: 500;
-    margin-bottom: 0;
-    margin-top: 1rem;
-    font-size: 1.7rem;
-    clear: both;
-    color: var(--card-border);
-  }
-</style>
+<link rel="stylesheet" href="/assets/css/timeline.css">
 
 <div class="h2-container">
   <h2>Timeline</h2>
@@ -205,7 +15,7 @@ layout: default
         <div class="timeline__card card">
           <header class="card__header">
             <div class="company-image">
-              <img src="images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
+              <img src="assets/images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
             </div>
             <time class="time" datetime="2022-06-01">
               <span class="time__month">June - August</span>
@@ -243,7 +53,7 @@ layout: default
         <div class="timeline__card card">
           <header class="card__header">
             <div class="company-image">
-              <img src="images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
+              <img src="assets/images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
             </div>
             <time class="time" datetime="2021-06-01">
               <span class="time__month">June - August</span>
@@ -278,10 +88,10 @@ layout: default
         <div class="timeline__card card">
           <header class="card__header">
             <div class="company-image">
-              <img src="images/companies/UoL.jpg" alt="The logo of the University of Leeds.">
+              <img src="assets/images/companies/UoL.jpg" alt="The logo of the University of Leeds.">
             </div>
             <div class="company-image">
-              <img src="images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
+              <img src="assets/images/companies/pwc-squarelogo.png" alt="The logo of the company PwC">
             </div>
             <time class="time" datetime="2020-07-01">
               <span class="time__month">July - ONGOING (2024)</span>
@@ -306,7 +116,7 @@ layout: default
         <div class="timeline__card card">
           <header class="card__header">
             <div class="company-image">
-              <img src="images/companies/t&f.jpg" alt="The logo of the University of Leeds.">
+              <img src="assets/images/companies/t&f.jpg" alt="The logo of the University of Leeds.">
             </div>
             <time class="time" datetime="2020-07-01">
               <span class="time__month">July - September</span>
@@ -341,7 +151,7 @@ layout: default
         <div class="timeline__card card">
           <header class="card__header">
             <div class="company-image">
-              <img src="images/companies/plusnet.jpg" alt="The logo of the University of Leeds.">
+              <img src="assets/images/companies/plusnet.jpg" alt="The logo of the University of Leeds.">
             </div>
             <time class="time" datetime="2019-07-01" style="min-width:90px;">
               <span class="time__month">July</span>
@@ -371,7 +181,7 @@ layout: default
         <div class="timeline__card card">
           <header class="card__header">
             <div class="company-image">
-              <img src="images/companies/nuom.jpg" alt="The logo of the University of Leeds.">
+              <img src="assets/images/companies/nuom.jpg" alt="The logo of the University of Leeds.">
             </div>
             <time class="time" datetime="2019-07-01" style="min-width:108px;">
               <span class="time__month">July</span>
