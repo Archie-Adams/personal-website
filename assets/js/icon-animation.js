@@ -45,9 +45,9 @@ window.onload = function () {
   }
 
   // Create image objects.
-  var rocketsImage = addImage("../images/animation-sprites/rockets.png");
-  var planetsImage = addImage("../images/animation-sprites/planets.png");
-  var starsImage = addImage("../images/animation-sprites/stars.png");
+  var rocketsImage = addImage("/assets/images/animation-sprites/rockets.png");
+  var planetsImage = addImage("/assets/images/animation-sprites/planets.png");
+  var starsImage = addImage("/assets/images/animation-sprites/stars.png");
 
   loadImages();
 
