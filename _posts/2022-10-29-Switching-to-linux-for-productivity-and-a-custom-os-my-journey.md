@@ -13,4 +13,4 @@ description: I've been a Windows user all my life, but after learning more about
 permalink: /blog/switching-to-linux-for-productivity-and-a-custom-os-my-journey
 ---
 
-This article is coming soon!
+### This article is coming soon!

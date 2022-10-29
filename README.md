@@ -28,10 +28,6 @@ Built on top of [this](https://www.section.io/engineering-education/build-a-jeky
 
 ## TODOs
 
-- Decrease standard text size on mobile for homepage and timeline
-
-- Blog post layout
-
 - Carousel for projects on the home page
 
 - Projects page content
