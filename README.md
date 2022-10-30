@@ -28,10 +28,16 @@ Built on top of [this](https://www.section.io/engineering-education/build-a-jeky
 
 ## TODOs
 
+- Highlighted nav links
+
 - Carousel for projects on the home page
 
 - Projects page content
-- Finish 3 blog posts
+- Blog posts content
+  - Linux
+  - KBSMM
+  - Keyboard layouts
+  
 - Proper css refactor using the built in _scss compiler.
   - remove all style tags, ideally all link tags too with proper written scss
 
