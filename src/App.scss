@@ -1,0 +1,37 @@
+@import './_variables.scss';
+
+#root, body, html {
+  margin:0;
+}
+
+#root {
+  overflow-y: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url('https://img.freepik.com/free-vector/oak-wood-textured-design-background_53876-115928.jpg');
+  background-repeat: repeat;
+}
+
+// TODO: Change highlight color
+
+.paperStack {
+  position: absolute;
+  top: (50vh - 0.5 * $paper-height); // center the paper.
+  left: $paper-offset;
+}
+
+.phone {
+  position: absolute;
+  top: (30vh);
+  left: calc($paper-offset + $paper-width + cm(3));
+}
+
+.pen {
+  position: absolute;
+  left: cm(5);
+  top: cm(5);
+  width: cm(0.6);
+  height: cm(14);
+  background-color: chocolate;
+}
+

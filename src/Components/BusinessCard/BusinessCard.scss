@@ -1,0 +1,88 @@
+@import '../../variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
+
+// https://redstapler.co/photorealistic-css-design/
+
+// TODO: Refactor.
+
+.business-card-container {
+  position: absolute;
+  left: cm(28);
+  top: cm(2);
+  
+  .card, .backCard {
+    position: absolute;
+    background-color: antiquewhite;
+    width: cm(9);
+    height: cm(5);
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    text-align: center;
+    border-radius: cm(0.4);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .25);
+
+    
+    p {
+      font-size: cm(0.5);
+      margin: 0;
+      margin-top: cm(0.22);
+      font-family: 'Chakra Petch', sans-serif;
+      line-height: cm(0.7);
+    }
+    p.green {
+      font-size: cm(0.4);
+      color: white;
+      background-color: $dark-green;
+    }
+    p:not(.green) {
+      color: rgb(42, 42, 42);
+    }
+  }
+  .backCard {
+    background-color: $light-green;
+    display: block;
+    text-align: left;
+    p{
+      margin: cm(0.6);
+      line-height: cm(0.39);
+      font-size: cm(0.39);
+    }
+  }
+  
+  >:nth-child(1) {
+    transform: rotateZ(2deg);
+    top: cm(0.2)
+  }
+  >:nth-child(2) {
+    transform: rotateZ(3deg);
+  }
+  >:nth-child(3) {
+    transform: rotateZ(1deg);
+  }
+  >:nth-child(4) {
+    transform: rotateZ(-2deg);
+    left: cm(-0.5);
+  }
+  >:nth-child(5) {
+    transform: rotateZ(-5deg);
+    left: cm(-0.2);
+    top: cm(-0.9)
+  }
+  >:nth-child(6) {
+    transform: rotateZ(8deg);
+    top: cm(-0.1);
+    left: cm(0.5)
+  }
+  >:nth-child(7) {
+    left: cm(-0.4);
+    transform: rotateZ(-5deg);
+  }
+  >:nth-child(8) {
+    left: cm(0.4);
+    transform: rotateZ(5deg);
+  }
+  >:nth-child(16) {
+    left: cm(9);
+    transform: rotateZ(5deg);
+  }
+}

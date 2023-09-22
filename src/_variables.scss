@@ -1,0 +1,11 @@
+@function cm($length) {
+  @return 2.8vh * $length;
+}
+
+// A4 dimensions.
+$paper-height: cm(29.7);
+$paper-width: cm(21);
+$paper-offset: 10vh;
+
+$dark-green: rgb(0, 37, 24);
+$light-green: rgb(160, 202, 193);

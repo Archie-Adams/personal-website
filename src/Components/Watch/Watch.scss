@@ -1,0 +1,41 @@
+@import '../../variables.scss';
+
+
+.watch-container {
+  position: absolute;
+  left: cm(39);
+  top: cm(10);
+  transform: rotateZ(-13deg);
+
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  width: cm(2);
+  height: cm(17);
+
+  .strap {
+    background-color: rgb(157, 154, 154);
+    width: 100%;
+    height: 100%;
+
+    .line {
+      position: relative;
+      $line-width: 8%;
+      left: calc((100% - #{$line-width}) / 2);
+      background-color: black;
+      width: $line-width;
+      height: 100%;
+    }
+  }
+
+  .face {
+    position: relative;
+    left: cm(-0.85);
+    top: calc(-50% - cm(1.8)); // half the face
+    background-color: rgb(64, 147, 231);
+    width: cm(3.6);
+    height: cm(3.6);
+    border-radius: 100%;
+  }
+}
