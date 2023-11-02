@@ -30,7 +30,7 @@ of defining by grid-areas.*/
 /* The my-projects card is a grid with two cols at max size. */
 #my-projects-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
 }
 
 /* My projects card falls to two rows when screen is <950px */
